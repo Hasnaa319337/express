@@ -1,0 +1,138 @@
+<template>
+  <div class="hero">
+    <v-carousel hide-delimiter-background show-arrows="hover">
+      <v-carousel-item
+        src="https://www.majanexpres.com/upload/16660820964904.jpg"
+        cover
+        ><div
+          class="slider_contain"
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+        >
+          <h3>مجان للشحن</h3>
+          <p>
+            من مكانك إلى المكان المقصود نحن نقدم خدماتنا في الوقت المحدد بأمان
+          </p>
+          <router-link to="/" class="btn btn-border-4"
+            >اقرأ المزيد
+          </router-link>
+        </div></v-carousel-item
+      >
+
+      <v-carousel-item
+        src="https://www.majanexpres.com/upload/166608287512241.jpg"
+        cover
+      >
+        <div class="slider_contain">
+          <h3>النقل البري</h3>
+          <p>
+            تقدم خدمة مجان للشحن البحري لعملائها خدمات موثوقة خدمات حمولة شاحنة
+            فعالة وأقل حمولة (LTL) يحتاجونها لشحناتهم الإقليمية والمحلية
+          </p>
+          <router-link to="/" class="btn btn-border-4"
+            >اقرأ المزيد      </router-link>
+        </div>
+      </v-carousel-item>
+    </v-carousel>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+.v-window {
+  /* height: 600px !important; */
+}
+.v-responsive__sizer ~ .v-responsive__content {
+  margin-inline-start: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.v-window__controls {
+  display: none !important;
+}
+.v-carousel__controls {
+  background: transparent !important;
+}
+.v-btn--variant-text .v-btn__overlay {
+  opacity: 1 !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 0 !important;
+}
+.v-btn {
+  color: #9d9d9d !important;
+}
+.v-btn--active {
+  color: #c6712c !important;
+}
+
+/* start:contain style */
+.hero .slider_contain {
+  background: rgba(0, 0, 0, 22%);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  margin: 20px;
+  width: 45%;
+}
+.hero .slider_contain h3 {
+  font-size: 30px;
+  font-family: "Cairo-Bold";
+  margin-bottom: 20px;
+}
+.hero .slider_contain p {
+  font-size: 22px;
+  font-family: "Cairo-Medium";
+  margin-bottom: 20px;
+}
+
+.hero .slider_contain .btn {
+  position: absolute;
+  display: inline-block;
+  background: white;
+  text-align: center;
+
+  transition: all 0.5s linear;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  color: #000;
+  padding-top: 5px;
+  left: 39%;
+  bottom: -18px;
+}
+
+.v-carousel__controls button:focus {
+  outline: none !important;
+}
+.v-btn--icon {
+  border-radius: none !important;
+}
+@media (max-width: 975px) {
+  .hero .slider_contain h3 {
+    font-size: 24px;
+    font-family: "Podkova-SemiBold";
+  }
+  .hero .slider_contain p {
+    font-size: 18px;
+    font-family: "Podkova-Regular";
+  }
+  .hero .slider_contain .btn {
+    font-size: 14px;
+    padding-top: 10px;
+    left: 30%;
+  }
+}
+/* end:contain style */
+</style>
