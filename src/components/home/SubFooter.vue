@@ -77,7 +77,7 @@ export default {};
 <style scoped>
 .sub_footer {
   background: #232135e8;
-  padding: 30px 0;
+  padding: 30px ;
   color: white;
 }
 .contact_ways {

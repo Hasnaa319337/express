@@ -99,7 +99,7 @@ export default {};
 }
 .best .reasons {
   margin: auto;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 .best .reasons .reason {
   display: flex;
@@ -138,5 +138,23 @@ export default {};
   border-radius: 50%;
   font-size: 39px;
   margin: 0 11px;
+}
+@media (max-width: 1200px) {
+  .reason .v-icon {
+    margin: 0 7px;
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .reason .v-icon {
+  width: 40px;
+  height: 40px;
+  }
+}
+@media (max-width: 825px) {
+  .reason span {
+font-size: 15px;
+  }
 }
 </style>

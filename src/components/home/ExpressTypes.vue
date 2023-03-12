@@ -97,7 +97,7 @@ export default {
   text-align: center;
   position: relative;
   transition: .3s all linear;
-  margin: 20px 0;
+  margin: 20px ;
 }
 .first {
   background-image: url("https://www.majanexpres.com/upload/16665575069926.jpg");
