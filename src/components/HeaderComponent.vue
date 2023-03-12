@@ -15,12 +15,13 @@
           </template>
 
           <template #end>
-            <img
+            lang
+            <!-- <img
               alt="logo"
               src="https://primefaces.org/cdn/primevue/images/logo.svg"
               height="40"
               class="mr-2"
-            />
+            /> -->
           </template>
         </Menubar>
       </v-container>
@@ -34,13 +35,16 @@ export default {
     return {
       items: [
         {
-          label: "File",
+          label: "الرئيسية",
         },
         {
-          label: "Edit",
+          label: "من نحن",
         },
         {
-          label: "vv",
+          label: "الخدمات",
+        },
+        {
+          label: "تواصل معنا",
         },
       ],
     };
@@ -48,7 +52,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .card {
   background: #fff;
 }
