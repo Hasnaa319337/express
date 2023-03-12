@@ -157,7 +157,7 @@ export default {};
     width: 120px;
     height: 40px;
     font-size: 14px;
-    left: 25%;
+    left: 30%;
   }
 }
 @media (max-width: 400px) {
