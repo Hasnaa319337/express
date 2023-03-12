@@ -64,7 +64,7 @@ export default {};
   background: transparent !important;
 }
 .v-btn--variant-text .v-btn__overlay {
-  opacity: 1 !important;
+  opacity: 0 !important;
   width: 20px !important;
   height: 20px !important;
   border: 0 !important;
@@ -102,7 +102,6 @@ export default {};
   display: inline-block;
   background: white;
   text-align: center;
-
   transition: all 0.5s linear;
   width: 150px;
   height: 40px;
@@ -131,7 +130,7 @@ export default {};
   .hero .slider_contain .btn {
     font-size: 14px;
     padding-top: 10px;
-    left: 30%;
+    left: 32%;
   }
 }
 /* end:contain style */

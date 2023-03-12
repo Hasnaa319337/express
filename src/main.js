@@ -25,7 +25,9 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-// import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
+
+import { mdi } from "vuetify/iconsets/mdi";
+import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
 
 // i18n
 // import i18n from "./i18n";
@@ -41,6 +43,9 @@ import Menubar from "primevue/menubar";
 const vuetify = createVuetify({
   components,
   directives,
+  icons: {
+    defaultSet: "mdi",
+  },
 });
 
 const app = createApp(App);

@@ -29,6 +29,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@mdi/font": "^7.1.96",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/test-utils": "^2.3.0",
     "jsdom": "^21.1.0",

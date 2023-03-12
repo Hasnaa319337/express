@@ -1,5 +1,21 @@
 @import "./base.css";
 
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(231, 231, 231); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c6712c; /* color of the scroll thumb */
+  border-radius: 8px; /* roundness of the scroll thumb */
+  /* border: 3px solid orange;  creates padding around scroll thumb */
+}
+
 @font-face {
   font-family: "Cairo-Bold";
   src: local("Cairo"), url(./fonts/Cairo-Bold.ttf) format("truetype");
@@ -24,6 +40,7 @@
 /* global btn */
 * {
   font-family: "Cairo-Regular";
+  direction: rtl;
 }
 .btn {
   position: relative;
@@ -75,4 +92,19 @@
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   border-color: #c6712c;
+}
+.main_head {
+  border: 2px solid #000000b1;
+  display: flex;
+  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: fit-content;
+  margin-block: 50px;
+  font-family: "Cairo-SemiBold";
+  color: #fe8704;
+  
 }
