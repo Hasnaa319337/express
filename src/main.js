@@ -47,10 +47,20 @@ const vuetify = createVuetify({
     defaultSet: "mdi",
   },
 });
+import { createI18n } from "vue-i18n";
+import messages from "@intlify/unplugin-vue-i18n/messages";
+const i18n = createI18n({
+  legacy: false,
+  globalInjection: true,
+  locale: "en",
+  fallbackLocale: "en",
+  availableLocales: ["en", "ar"],
+  messages: messages,
+});
 
 const app = createApp(App);
 
-// app.use(i18n);
+app.use(i18n);
 
 // app.use(store);
 app.use(router);

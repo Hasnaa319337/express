@@ -35,7 +35,8 @@
             فعالة وأقل حمولة (LTL) يحتاجونها لشحناتهم الإقليمية والمحلية
           </p>
           <router-link to="/" class="btn btn-border-4"
-            >اقرأ المزيد      </router-link>
+            >اقرأ المزيد
+          </router-link>
         </div>
       </v-carousel-item>
     </v-carousel>
@@ -131,6 +132,32 @@ export default {};
     font-size: 14px;
     padding-top: 10px;
     left: 32%;
+  }
+}
+@media (max-width: 750px) {
+  .hero .slider_contain .btn {
+    left: 28%;
+  }
+}
+@media (max-width: 650px) {
+  .hero .slider_contain .btn {
+    left: 25%;
+  }
+}
+@media (max-width: 500px) {
+  .hero .slider_contain .btn {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    left: 25%;
+  }
+}
+@media (max-width: 400px) {
+  .hero .slider_contain .btn {
+    width: 100px;
+    height: 40px;
+    font-size: 10px;
+    left: 23%;
   }
 }
 /* end:contain style */
