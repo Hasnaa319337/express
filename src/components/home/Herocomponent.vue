@@ -138,6 +138,9 @@ export default {};
   .hero .slider_contain .btn {
     left: 28%;
   }
+  .hero .slider_contain {
+    width: 70%;
+  }
 }
 @media (max-width: 650px) {
   .hero .slider_contain .btn {
