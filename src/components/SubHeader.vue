@@ -44,6 +44,11 @@ export default {};
   }
 }
 @media (max-width: 400px) {
+  .sub_header {
+  display: block;
+
+  margin: 10px 0;
+}
   .sub_header .v-icon {
   color: #fe8704;
   margin: 0 2px;
