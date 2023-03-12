@@ -142,6 +142,11 @@ export default {};
     width: 70%;
   }
 }
+@media (max-width: 700px) {
+  .hero .slider_contain .btn {
+    left: 32%;
+  }
+}
 @media (max-width: 650px) {
   .hero .slider_contain .btn {
     left: 25%;
@@ -160,7 +165,17 @@ export default {};
     width: 100px;
     height: 40px;
     font-size: 10px;
-    left: 23%;
+    left: 31%;
+  }
+}
+@media (max-width: 390px) {
+  .hero .slider_contain .btn {
+    left:28%;
+  }
+}
+@media (max-width: 360px) {
+  .hero .slider_contain .btn {
+    left: 29%;
   }
 }
 /* end:contain style */
