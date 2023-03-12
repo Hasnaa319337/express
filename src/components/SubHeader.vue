@@ -40,13 +40,14 @@ export default {};
 }
 @media (max-width: 700px) {
   .sub_header {
-    column-gap: 0;
+    column-gap: 10px;
+    font-size: 10px;
   }
 }
 @media (max-width: 400px) {
   .sub_header {
 
- font-size: 10px;
+
 
 }
   .sub_header .v-icon {
