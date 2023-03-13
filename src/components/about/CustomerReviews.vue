@@ -6,7 +6,7 @@
       <Carousel
         :wrap-around="true"
         :autoplay="1"
-        :transition="10000"
+        :transition="8000"
         :breakpoints="breakpoints"
         :show-arrows="false"
       >
