@@ -17,6 +17,7 @@ footer {
   color: white;
 }
 footer p{
-    margin: 0;
+    
+    text-align: center;
 }
 </style>
