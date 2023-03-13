@@ -1,7 +1,7 @@
 <template>
   <div class="marquee">
    
-        <marquee>Hasnaa</marquee>
+        <marquee>نوفر على عملائنا عناء التوافق بين شركات الاستيراد والتصدير وشركات الشحن وشركات التخليص الجمركى فنحن متخصصين فى الثلاث مجالات</marquee>
  
   </div>
 </template>
