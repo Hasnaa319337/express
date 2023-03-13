@@ -39,6 +39,9 @@ import "primeicons/primeicons.css"; //icons
 
 import PrimeVue from "primevue/config";
 import Menubar from "primevue/menubar";
+import ScrollTop from 'primevue/scrolltop';
+import Carousel from 'primevue/carousel';
+
 
 const vuetify = createVuetify({
   components,
@@ -73,5 +76,7 @@ app.use(bootstrap);
 // primevue
 app.use(PrimeVue);
 app.component("Menubar", Menubar);
+app.component("ScrollTop", ScrollTop);
+app.component("Carousel",Carousel)
 
 app.mount("#app");

@@ -14,6 +14,11 @@
                 <router-link to="/about"> {{ $t("navs.aboutUs") }}</router-link>
               </li>
               <li>
+                <router-link to="/services">{{
+                  $t("navs.ourServices")
+                }}</router-link>
+              </li>
+              <li>
                 <router-link to="/address">{{
                   $t("navs.ourAddress")
                 }}</router-link>
@@ -47,6 +52,11 @@
               </li>
               <li>
                 <router-link to="/about"> {{ $t("navs.aboutUs") }}</router-link>
+              </li>
+              <li>
+                <router-link to="/services">{{
+                  $t("navs.ourServices")
+                }}</router-link>
               </li>
               <li>
                 <router-link to="/address">{{
@@ -203,7 +213,7 @@ router-link {
 }
 
 .list li {
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 .buttons {
   display: flex;
@@ -424,7 +434,7 @@ router-link {
     .logo {
       margin: auto;
     }
-    div{
+    div {
       margin: auto;
     }
     .bars {
@@ -503,5 +513,13 @@ router-link {
       }
     }
   }
+}
+li {
+  font-size: 1.3rem;
+  padding: 15px 0;
+  font-size: 15px;
+  padding: 15px 0;
+  float: left;
+  margin-right: 29px;
 }
 </style>

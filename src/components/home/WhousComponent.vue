@@ -11,14 +11,13 @@
         data-aos-mirror="true"
         data-aos-once="true"
       >
-        <h4>حول مجان للشحن</h4>
-        <p>
-          مجموعة موثقة تقدم العديد من الخدمات ذات القيمة المضافة المتعلقة بالشحن
-          بجميع أنواعه (الشحن الجوي والبحري والتوصيل الداخلي في سلطنة عمان)
+        <h4>{{ $t('misc.majanExpress') }}</h4>
+        <p>{{ $t('misc.learnAboutUs') }}
+          
         </p>
         <router-link to="/about" class="btn btn-border-4">
-          <img src="@/assets/images/Arrow.png" alt="" />
-          تعرف علينا
+         
+          {{ $t('buttons.learnAbout') }}
         </router-link>
       </div>
  
@@ -72,10 +71,10 @@ export default {};
   transition: all 0.5s linear;
   width: 150px;
   height: 40px;
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
   float: left;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .logo_image {
