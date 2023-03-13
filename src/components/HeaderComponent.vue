@@ -528,5 +528,6 @@ li {
 }
 .hidden_list{
   flex-direction: column;
+  width: 100%;
 }
 </style>
