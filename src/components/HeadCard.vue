@@ -56,11 +56,11 @@ export default {
 
       // auctions
 
-      if (this.myurl === "all_acutions") {
+      if (this.myurl === "address") {
         if (this.$i18n.locale == "ar") {
-          newURL = " كل المزادات";
+          newURL = "عناوينا";
         } else {
-          newURL = "All Auctions";
+          newURL = "Our Address";
         }
         return newURL;
       }
@@ -299,5 +299,4 @@ li {
   float: left;
   margin-right: 29px;
 }
-
 </style>

@@ -18,7 +18,7 @@
           <p>
             من مكانك إلى المكان المقصود نحن نقدم خدماتنا في الوقت المحدد بأمان
           </p>
-          <router-link to="/" class="btn btn-border-4"
+          <router-link to="/about" class="btn btn-border-4"
             >اقرأ المزيد
           </router-link>
         </div></v-carousel-item
@@ -34,7 +34,7 @@
             تقدم خدمة مجان للشحن البحري لعملائها خدمات موثوقة خدمات حمولة شاحنة
             فعالة وأقل حمولة (LTL) يحتاجونها لشحناتهم الإقليمية والمحلية
           </p>
-          <router-link to="/" class="btn btn-border-4"
+          <router-link to="/servies" class="btn btn-border-4"
             >اقرأ المزيد
           </router-link>
         </div>
