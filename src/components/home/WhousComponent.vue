@@ -3,7 +3,7 @@
     <div class="whous">
       <div
         class="whous_contain"
-        data-aos="slide-left"
+        data-aos="slide-right"
         data-aos-offset="200"
         data-aos-delay="100"
         data-aos-duration="1000"
