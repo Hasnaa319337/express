@@ -1,7 +1,7 @@
 <template>
   <div class="best">
     <v-container>
-      <h3 class="main_head">لماذا نحن الأفضل</h3>
+      <h3 class="main_head">{{ $t('misc.best') }} </h3>
       <div class="reasons">
         <v-row>
           <v-col
@@ -19,7 +19,7 @@
             data-aos-once="true"
           >
             <div class="reason reason1">
-              <span>دعم العملاء</span> <v-icon icon="mdi-face-agent" />
+              <span>{{ $t('misc.customerSupport') }}</span> <v-icon icon="mdi-face-agent" />
             </div>
           </v-col>
           <v-col
@@ -37,7 +37,7 @@
             data-aos-once="true"
           >
             <div class="reason reason2">
-              <span>امتياز موثوق به</span>
+              <span>{{ $t('misc.Reliability') }}</span>
               <v-icon icon="mdi-card-account-details-star-outline" />
             </div>
           </v-col>
@@ -56,7 +56,7 @@
             data-aos-once="true"
           >
             <div class="reason reason3">
-              <span>خدمات استشارية مجانيه</span>
+              <span>{{ $t('misc.FreeConsulting') }}</span>
               <v-icon icon="mdi-bag-checked" />
             </div>
           </v-col>
@@ -75,7 +75,7 @@
             data-aos-once="true"
           >
             <div class="reason reason4">
-              <span>الموثوقية والالتزام بالمواعيد</span>
+              <span>{{ $t('misc.trustedFranchise') }}</span>
               <v-icon icon="mdi-timer-cog-outline" />
             </div>
           </v-col>

@@ -16,7 +16,7 @@
         >
           <div class="overlay">
             <div class="logo">
-              <span>الشحن البحري</span>
+              <span>{{ $t('misc.seaFreight') }} </span>
               <v-icon icon="mdi-ferry" />
             </div>
           </div>
@@ -34,7 +34,7 @@
         >
           <div class="overlay">
             <div class="logo">
-              <span>الشحن الجوي</span>
+              <span>{{ $t('misc.airFreight') }} </span>
               <v-icon icon="mdi-airplane" />
             </div>
           </div>

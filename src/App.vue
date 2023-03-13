@@ -1,5 +1,5 @@
 <template>
-  <div :class="this.$i18n.locale == 'ar' ? 'is-rtl' : 'is_ltr'">
+  <div :class="this.$i18n.locale == 'ar' ? 'is_rtl' : 'is_ltr'">
     <!-- <sub-header /> -->
     <HeaderComponent />
     <main>
@@ -13,10 +13,8 @@
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
       ></router-view>
-  
     </main>
     <footer-component />
-   
   </div>
 </template>
 
@@ -28,6 +26,13 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 // import SubHeader from "./components/SubHeader.vue";
 export default {
   components: { HomeView, FooterComponent, HeaderComponent },
+  mounted() {
+    if ($i18n.global.locale == "en") {
+      document.body.dir = "ltr";
+    } else {
+      document.body.dir = "rtl";
+    }
+  },
 };
 </script>
 <style lang="scss"></style>

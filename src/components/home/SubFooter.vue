@@ -9,10 +9,10 @@
                 <v-icon icon="mdi-clock-time-four-outline" />
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
-                <span>ساعات العمل</span>
+                <span>{{ $t('misc.timeWork') }}</span>
                 <div class="contain">
-                  <p>الأحد - الخميس 09.00 - 18.00</p>
-                  <p>السبت 09.00 - 14.00</p>
+                  <p>{{ $t("misc.Sunday") }} - {{ $t("misc.Thursday") }} 09.00 - 18.00</p>
+                  <p>{{ $t('misc.Saturday') }} 09.00 - 14.00</p>
                 </div>
               </v-col>
             </v-row>
@@ -23,7 +23,7 @@
                 <v-icon icon="mdi-phone-hangup" />
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
-                <span> تواصل معنا</span>
+                <span>{{ $t('misc.Contact') }}</span>
                 <div class="contain">
                   <p>95564020</p>
                   <p>92247043</p>
@@ -57,7 +57,7 @@
                 <v-icon icon="mdi-email" />
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
-                <span>البريد اللإلكتروني </span>
+                <span>{{ $t('misc.Email') }}</span>
                 <div class="contain">
                   <p>Majanexpres@gmail.com</p>
                 </div>

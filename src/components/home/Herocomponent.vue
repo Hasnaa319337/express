@@ -14,12 +14,12 @@
           data-aos-mirror="true"
           data-aos-once="true"
         >
-          <h3>مجان للشحن</h3>
+          <h3>{{ $t("misc.majanExpress") }}</h3>
           <p>
-            من مكانك إلى المكان المقصود نحن نقدم خدماتنا في الوقت المحدد بأمان
+            {{ $t("misc.fromPlace") }}
           </p>
           <router-link to="/about" class="btn btn-border-4"
-            >اقرأ المزيد
+            >{{ $t("buttons.Learn more") }}
           </router-link>
         </div></v-carousel-item
       >
@@ -29,13 +29,12 @@
         cover
       >
         <div class="slider_contain">
-          <h3>النقل البحري</h3>
+          <h3>{{ $t("misc.seaFreight") }}</h3>
           <p>
-            تقدم خدمة مجان للشحن البحري لعملائها خدمات موثوقة خدمات حمولة شاحنة
-            فعالة وأقل حمولة (LTL) يحتاجونها لشحناتهم الإقليمية والمحلية
+            {{ $t("misc.majanOcean") }}
           </p>
-          <router-link to="/servies" class="btn btn-border-4"
-            >اقرأ المزيد
+          <router-link to="/servies" class="btn btn-border-4">
+            {{ $t("buttons.Learn more") }}
           </router-link>
         </div>
       </v-carousel-item>
@@ -170,7 +169,7 @@ export default {};
 }
 @media (max-width: 390px) {
   .hero .slider_contain .btn {
-    left:28%;
+    left: 28%;
   }
 }
 @media (max-width: 360px) {

@@ -211,6 +211,10 @@ router-link {
     }
   }
 }
+.list{
+  display: flex;
+  
+}
 
 .list li {
   font-size: 15px !important;
@@ -519,7 +523,7 @@ li {
   padding: 15px 0;
   font-size: 15px;
   padding: 15px 0;
-  float: left;
+
   margin-right: 29px;
 }
 </style>

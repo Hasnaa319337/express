@@ -102,7 +102,7 @@
     "apply": "Apply",
     "activate": "Activate",
     "Learn more": "Learn more",
-    "learnAbout":"Learn More",
+    "learnAbout": "Learn More",
     "buyNow": "Buy now",
     "viewMore": "View More",
     "loadMore": "Load more",
@@ -240,8 +240,23 @@
     "reason8": "We ensure complete security",
     "why": "Why Us",
     "customerReviews": "customers Reviews",
-    "learnAboutUs": "A documented group that provides many value-added services related to freight of all types (air and sea freight and internal delivery in the Sultanate of Oman)"
-    ,"majanExpress" :"Majan Express",
-    "seaFreight":"Sea Freight"
+    "learnAboutUs": "A documented group that provides many value-added services related to freight of all types (air and sea freight and internal delivery in the Sultanate of Oman)",
+    "majanExpress": "Majan Express",
+    "seaFreight": "Sea Freight",
+    "airFreight": "Air Freight",
+    "best": "Why we are the best",
+    "marqueeText": "We save our customers the trouble of matching between import and export companies, shipping companies, and customs clearance companies. We specialize in three fields",
+    "fromPlace": "From your place to your destination we deliver our services on time safely",
+    "majanOcean": "Majan Ocean Freight provides its customers with reliable services, efficient and Least Load (LTL) freighter services they require for their regional and domestic shipments.",
+    "customerSupport": "customer support",
+    "trustedFranchise":"trusted franchise",
+    "FreeConsulting":"Free consulting services",
+    "Reliability":"Reliability and punctuality",
+    "Email":"Email",
+    "Contact":"Contact Us",
+    "timeWork":"Work Time",
+    "Sunday":"Sunday",
+    "Thursday":"Thursday",
+    "Saturday":"Saturday"
   }
 }
