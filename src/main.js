@@ -29,8 +29,7 @@ import * as directives from "vuetify/directives";
 import { mdi } from "vuetify/iconsets/mdi";
 import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
 
-// i18n
-// import i18n from "./i18n";
+
 
 //primeVue
 import "primevue/resources/themes/saga-blue/theme.css"; //theme
@@ -51,16 +50,21 @@ const vuetify = createVuetify({
     defaultSet: "mdi",
   },
 });
+import Cookies from 'js-cookie'
 import { createI18n } from "vue-i18n";
 import messages from "@intlify/unplugin-vue-i18n/messages";
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: "en",
-  fallbackLocale: "en",
-  availableLocales: ["en", "ar"],
-  messages: messages,
+  locale: Cookies.get('locale')|| 'ar',
+  fallbackLocale: Cookies.get('locale') || 'ar',
+  messages: messages
+  // locale: "en",
+  // fallbackLocale: "en",
+  // availableLocales: ["en", "ar"],
+  // messages: messages,
 });
+
 
 const app = createApp(App);
 
