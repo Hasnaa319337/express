@@ -67,9 +67,9 @@ export default {
 }
 .express_types {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  justify-items: center;
 }
 .first {
   background-image: url("https://www.majanexpres.com/upload/16665575069926.jpg");
