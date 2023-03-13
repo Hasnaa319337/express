@@ -41,7 +41,7 @@ import PrimeVue from "primevue/config";
 import Menubar from "primevue/menubar";
 import ScrollTop from 'primevue/scrolltop';
 import Carousel from 'primevue/carousel';
-import ProgressBar from 'primevue/ProgressBar';
+
 
 
 const vuetify = createVuetify({
@@ -79,6 +79,5 @@ app.use(PrimeVue);
 app.component("Menubar", Menubar);
 app.component("ScrollTop", ScrollTop);
 app.component("Carousel",Carousel);
-app.component("ProgressBar",ProgressBar)
 
 app.mount("#app");
