@@ -75,4 +75,8 @@ select {
 span{
   display: block;
 }
+
+button{
+  outline: none;
+}
 </style>
