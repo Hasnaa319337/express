@@ -8,23 +8,23 @@
           <div class="list ">
             <ul class="list hidden_list">
               <li>
-                <router-link to="/">{{ $t("navs.home") }}</router-link>
+                <router-link to="/" @click="hideSideNav">{{ $t("navs.home") }}</router-link>
               </li>
               <li>
-                <router-link to="/about"> {{ $t("navs.aboutUs") }}</router-link>
+                <router-link to="/about" @click="hideSideNav"> {{ $t("navs.aboutUs") }}</router-link>
               </li>
               <li>
-                <router-link to="/services">{{
+                <router-link to="/services" @click="hideSideNav">{{
                   $t("navs.ourServices")
                 }}</router-link>
               </li>
               <li>
-                <router-link to="/address">{{
+                <router-link to="/address" @click="hideSideNav">{{
                   $t("navs.ourAddress")
                 }}</router-link>
               </li>
               <li>
-                <router-link to="/call">
+                <router-link to="/call" @click="hideSideNav">
                   {{ $t("navs.contactUs") }}</router-link
                 >
               </li>
