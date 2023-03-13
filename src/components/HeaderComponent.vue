@@ -5,8 +5,8 @@
       <transition>
         <div class="overlay" @close="hideSideNav" v-if="sideNavIsVisable">
           <div class="close" @click="hideSideNav"></div>
-          <div class="list">
-            <ul class="list">
+          <div class="list ">
+            <ul class="list hidden_list">
               <li>
                 <router-link to="/">{{ $t("navs.home") }}</router-link>
               </li>
@@ -525,5 +525,8 @@ li {
   padding: 15px 0;
 
   margin-right: 29px;
+}
+.hidden_list{
+  flex-direction: column;
 }
 </style>

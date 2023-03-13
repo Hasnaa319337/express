@@ -44,10 +44,7 @@
             </div>
 
             <marquee class="marquee"></marquee>
-            <v-progress-linear
-              indeterminate
-              color="yellow-darken-2"
-            ></v-progress-linear>
+            
           </v-col>
           <v-col
             cols="12"
