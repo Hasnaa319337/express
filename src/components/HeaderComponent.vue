@@ -24,7 +24,7 @@
                 }}</router-link>
               </li>
               <li>
-                <router-link to="/courses">{{
+                <router-link to="/courses" @click="hideSideNav">{{
                   $t("navs.ourCourses")
                 }}</router-link>
               </li>
