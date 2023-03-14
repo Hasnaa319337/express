@@ -30,7 +30,7 @@ export default {};
 </script>
 <style>
 .whous {
-  background-image: url("https://www.majanexpres.com/assets/images/breadcrumbs_bg.jpg");
+  background-image: url("../../assets/images/car.jpg");
   background-size: cover;
   background-position: 50% 50%;
   height: 450px;

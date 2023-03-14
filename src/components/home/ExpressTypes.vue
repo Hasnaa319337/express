@@ -72,10 +72,10 @@ export default {
   align-items: center;
 }
 .first {
-  background-image: url("https://www.majanexpres.com/upload/16665575069926.jpg");
+  background-image: url("../../assets/images/ship-express.jpg");
 }
 .second {
-  background-image: url("https://www.majanexpres.com/upload/166655750615322.jpg");
+  background-image: url("../../assets/images/air-express.jpg");
 }
 
 

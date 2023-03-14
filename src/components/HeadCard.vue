@@ -44,17 +44,16 @@ export default {
         return newURL;
       }
 
-      // Call Us
-      if (this.myurl === "call") {
+
+      if (this.myurl === "contact-us") {
         if (this.$i18n.locale == "ar") {
           newURL = " اتصل بنا";
         } else {
-          newURL = "Call Us";
+          newURL = "Contact Us";
         }
         return newURL;
       }
 
-      // auctions
 
       if (this.myurl === "address") {
         if (this.$i18n.locale == "ar") {
@@ -65,134 +64,18 @@ export default {
         return newURL;
       }
 
-      // all_Latests
-      if (this.myurl === "all_Latests") {
+      if (this.myurl === "services") {
         if (this.$i18n.locale == "ar") {
-          newURL = "كل المنتجات";
+          newURL = "خدماتنا ";
         } else {
-          newURL = "All Products";
+          newURL = "Our Servies";
         }
         return newURL;
       }
 
-      // all packages
+  
 
-      if (this.myurl === "packages") {
-        if (this.$i18n.locale == "ar") {
-          newURL = " الباقات ";
-        } else {
-          newURL = "packages";
-        }
-        return newURL;
-      }
-
-      // create Ads
-
-      if (this.myurl === "create-adveristment") {
-        if (this.$i18n.locale == "ar") {
-          newURL = " إضافة إعلان ";
-        } else {
-          newURL = "Create Ads";
-        }
-        return newURL;
-      }
-
-      // Publishments
-      if (this.myurl === "publishments") {
-        if (this.$i18n.locale == "ar") {
-          newURL = " إعلاناتي  ";
-        } else {
-          newURL = "Publishments";
-        }
-        return newURL;
-      }
-
-      // My Auctions
-
-      if (this.myurl === "my-auctions") {
-        if (this.$i18n.locale == "ar") {
-          newURL = "  مزاداتي ";
-        } else {
-          newURL = "My Auctions";
-        }
-        return newURL;
-      }
-
-      // FAQs
-
-      if (this.myurl === "faqs") {
-        if (this.$i18n.locale == "ar") {
-          newURL = "  الأسئلة الشائعة ";
-        } else {
-          newURL = "FAQs";
-        }
-        return newURL;
-      }
-
-      // privacy policy
-
-      if (this.myurl === "privacy-policy") {
-        if (this.$i18n.locale == "ar") {
-          newURL = "  سياسة الخصوصية ";
-        } else {
-          newURL = "Privacy Policy ";
-        }
-        return newURL;
-      }
-
-      // terms
-
-      if (this.myurl === "terms") {
-        if (this.$i18n.locale == "ar") {
-          newURL = " الشروط و الأحكام ";
-        } else {
-          newURL = "Terms and Conditions  ";
-        }
-        return newURL;
-      }
-
-      // chats
-
-      if (this.myurl === "chat") {
-        if (this.$i18n.locale == "ar") {
-          newURL = " المحاداثات";
-        } else {
-          newURL = " Chats";
-        }
-        return newURL;
-      }
-
-      // wishlist
-
-      if (this.myurl === "wishlist") {
-        if (this.$i18n.locale == "ar") {
-          newURL = "  المفضلة ";
-        } else {
-          newURL = "Wishlist";
-        }
-        return newURL;
-      }
-
-      // edit porofile
-
-      if (this.myurl === "edit-profile") {
-        if (this.$i18n.locale == "ar") {
-          newURL = "  حسابي ";
-        } else {
-          newURL = "My Account";
-        }
-        return newURL;
-      }
-
-      // search result
-      if (this.myurl === "search-result") {
-        if (this.$i18n.locale == "ar") {
-          newURL = "  نتائج البحث ";
-        } else {
-          newURL = "Search Results";
-        }
-        return newURL;
-      }
+      
     },
   },
   computed: {},

@@ -249,14 +249,16 @@
     "fromPlace": "From your place to your destination we deliver our services on time safely",
     "majanOcean": "Majan Ocean Freight provides its customers with reliable services, efficient and Least Load (LTL) freighter services they require for their regional and domestic shipments.",
     "customerSupport": "customer support",
-    "trustedFranchise":"trusted franchise",
-    "FreeConsulting":"Free consulting services",
-    "Reliability":"Reliability and punctuality",
-    "Email":"Email",
-    "Contact":"Contact Us",
-    "timeWork":"Work Time",
-    "Sunday":"Sunday",
-    "Thursday":"Thursday",
-    "Saturday":"Saturday"
+    "trustedFranchise": "trusted franchise",
+    "FreeConsulting": "Consulting services",
+    "Reliability": "Reliability and punctuality",
+    "Email": "Email",
+    "Contact": "Contact Us",
+    "timeWork": "Work Time",
+    "Sunday": "Sunday",
+    "Thursday": "Thursday",
+    "Saturday": "Saturday",
+    "contactDirect": "Contact us directly",
+    "contactDaily": "Contact us directly if you have any questions or inquiries, do not hesitate to contact us or send us a message, we will answer you within 24 hours!"
   }
 }

@@ -2,7 +2,7 @@
   <div class="hero">
     <v-carousel hide-delimiter-background show-arrows="hover">
       <v-carousel-item
-        src="https://www.majanexpres.com/upload/16660820964904.jpg"
+        src="../../assets/images/hero1.jpg"
         cover
         ><div
           class="slider_contain"
@@ -25,7 +25,7 @@
       >
 
       <v-carousel-item
-        src="https://www.majanexpres.com/upload/166608287512241.jpg"
+      src="../../assets/images/hero2.jpg"
         cover
       >
         <div class="slider_contain">
@@ -49,6 +49,9 @@ export default {};
 <style>
 .v-window {
   /* height: 600px !important; */
+}
+.v-carousel-item{
+  display: block !important;
 }
 .v-responsive__sizer ~ .v-responsive__content {
   margin-inline-start: 0;

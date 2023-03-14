@@ -24,7 +24,7 @@
                 }}</router-link>
               </li>
               <li>
-                <router-link to="/call" @click="hideSideNav">
+                <router-link to="/contact-us" @click="hideSideNav">
                   {{ $t("navs.contactUs") }}</router-link
                 >
               </li>
@@ -39,7 +39,7 @@
           <div class="logo">
             <router-link to="/">
               <img
-                src="https://www.majanexpres.com/assets/images/logo.png"
+                src="../assets/images/logo.png"
                 :alt="logo"
               />
             </router-link>
@@ -64,7 +64,7 @@
                 }}</router-link>
               </li>
               <li>
-                <router-link to="/call">
+                <router-link to="/contact-us">
                   {{ $t("navs.contactUs") }}</router-link
                 >
               </li>
