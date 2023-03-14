@@ -90,6 +90,7 @@ export default {
   align-items: center;
   justify-items: center;
   color: #fff;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
