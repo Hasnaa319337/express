@@ -9,10 +9,13 @@
                 <v-icon icon="mdi-clock-time-four-outline" />
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
-                <span>{{ $t('misc.timeWork') }}</span>
+                <span>{{ $t("misc.timeWork") }}</span>
                 <div class="contain">
-                  <p>{{ $t("misc.Sunday") }} - {{ $t("misc.Thursday") }} 09.00 - 18.00</p>
-                  <p>{{ $t('misc.Saturday') }} 09.00 - 14.00</p>
+                  <p>
+                    {{ $t("misc.Sunday") }} - {{ $t("misc.Thursday") }} 09.00 -
+                    18.00
+                  </p>
+                  <p>{{ $t("misc.Saturday") }} 09.00 - 14.00</p>
                 </div>
               </v-col>
             </v-row>
@@ -23,10 +26,10 @@
                 <v-icon icon="mdi-phone-hangup" />
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
-                <span>{{ $t('misc.Contact') }}</span>
+                <span>{{ $t("misc.Contact") }}</span>
                 <div class="contain">
                   <p>95564020</p>
-                  <p>92247043</p>
+
                   <ul>
                     <li>
                       <ShareNetwork
@@ -57,7 +60,7 @@
                 <v-icon icon="mdi-email" />
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
-                <span>{{ $t('misc.Email') }}</span>
+                <span>{{ $t("misc.Email") }}</span>
                 <div class="contain">
                   <p>Majanexpres@gmail.com</p>
                 </div>
@@ -77,7 +80,7 @@ export default {};
 <style scoped>
 .sub_footer {
   background: #232135e8;
-  padding: 30px ;
+  padding: 30px;
   color: white;
 }
 .contact_ways {

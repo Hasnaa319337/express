@@ -11,11 +11,11 @@
             <v-row>
               <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
                 <v-icon icon="mdi-map-marker-outline" style="color:#13136b"/> <br />
-                <span>العنوان</span>
+                <span>سلطنة عمان / مسقط</span>
               </v-col>
               <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
                 <v-icon icon="mdi-whatsapp" style="color:#08a508"/> <br />
-                <span>968 95564020+</span>
+                <span>95564020</span>
               </v-col>
               <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
                 <v-icon icon="mdi-gmail" style="color:#cb0909"/>

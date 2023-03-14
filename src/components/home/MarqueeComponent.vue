@@ -1,6 +1,11 @@
 <template>
   <div class="marquee">
-    <marquee>{{ $t('misc.marqueeText') }} </marquee>
+    <marquee direction="right" v-if="this.$i18n.locale == 'ar'"
+      >{{ $t("misc.marqueeText") }}
+    </marquee>
+    <marquee direction="left" v-if="this.$i18n.locale == 'en'"
+      >{{ $t("misc.marqueeText") }}
+    </marquee>
   </div>
 </template>
 

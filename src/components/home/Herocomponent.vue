@@ -4,6 +4,7 @@
       <v-carousel-item
         src="../../assets/images/hero1.jpg"
         cover
+        style="display: block"
         ><div
           class="slider_contain"
           data-aos="fade-down"
@@ -25,10 +26,20 @@
       >
 
       <v-carousel-item
-      src="../../assets/images/hero2.jpg"
+        src="../../assets/images/hero2.jpg"
         cover
+        style="display: block"
       >
-        <div class="slider_contain">
+        <div
+          class="slider_contain"
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+        >
           <h3>{{ $t("misc.seaFreight") }}</h3>
           <p>
             {{ $t("misc.majanOcean") }}
@@ -43,14 +54,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {},
+};
 </script>
 
 <style>
-.v-window {
-  /* height: 600px !important; */
-}
-.v-carousel-item{
+.v-carousel-item {
   display: block !important;
 }
 .v-responsive__sizer ~ .v-responsive__content {
@@ -180,5 +190,5 @@ export default {};
     left: 29%;
   }
 }
-/* end:contain style */
+
 </style>
