@@ -25,7 +25,9 @@
             <div class="courses_type1">
               <p>{{ $t("misc.serviceShip") }}</p>
             </div>
+            <marquee class="marquee"></marquee>
           </v-col>
+           
           <v-col
             cols="12"
             lg="6"
@@ -74,8 +76,10 @@
             data-aos-once="true"
             ><div class="courses_type4">
               <p>{{ $t("misc.servicePlane") }}</p>
-            </div></v-col
+            </div>
+            <marquee class="marquee"></marquee></v-col
           >
+      
         </v-row>
         <v-row>
           <v-col
@@ -95,7 +99,9 @@
             <div class="courses_type1">
               <p>{{ $t("misc.serviceLand") }}</p>
             </div>
+            <marquee class="marquee"></marquee>
           </v-col>
+         
           <v-col
             cols="12"
             lg="6"
@@ -188,7 +194,12 @@ export default {
   .courses_type6{
     background: url("../assets/images/land-service.jpg");
   }
-
+  .marquee {
+    background: #436e8a;
+    color: white;
+    height: 5px;
+    padding: 0;
+  }
 
 }
 </style>
