@@ -42,7 +42,7 @@ export default {
           name: "Ahmed Ali",
           text: "شركه ممتازه شكرا للعاملين بها و أنصح بالتعامل معها",
           image:
-            "https://eng-hasnaa.netlify.app/images/team-3.jpg",
+            "/src/assets/images/custome1.jpg",
         },
 
         {
@@ -50,21 +50,21 @@ export default {
           name: "samy Mohamed",
           text: "شركه محترمه وحسن استقبال العملاء فى الفروع ممتاز",
           image:
-            "https://blissful-bhaskara-a0d804.netlify.app/images/testimonials-5.jpg",
+            "/src/assets/images/customer2.jpg",
         },
         {
           id: 3,
           name: "Mona Khaled",
           text: "اقل الاسعار مقارنه بباقى شركات الشحن",
           image:
-            "https://edua.netlify.app/images/blog-2-450x267.jpg",
+            "/src/assets/images/customer3.jpg",
         },
         {
           id: 4,
           name: "Aya Omer",
           text: " مندوىبين محترمين شركه محترمه جدا و خدمه عملاء محترمه",
           image:
-            "https://eng-hasnaa.netlify.app/images/team-4.jpg",
+            "/src/assets/images/profile.png",
         },
       ],
       breakpoints: {

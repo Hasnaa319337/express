@@ -7,7 +7,7 @@
 
       <div class="courses_types">
         <div
-          class="courses_type1"
+          class="courses_type1 rainbow"
           data-aos="slide-left"
           data-aos-offset="200"
           data-aos-delay="100"
@@ -20,7 +20,7 @@
         </div>
 
         <div
-          class="courses_type2"
+          class="courses_type2 rainbow"
           data-aos="slide-right"
           data-aos-offset="200"
           data-aos-delay="100"
@@ -66,50 +66,59 @@ export default {
     align-items: center;
     column-gap: 50px;
   }
-  .courses_type1 {
-    margin-bottom: 20px;
-    font-family: "Cairo-Medium";
-    text-align: center;
-    height: 300px;
-    width: 300px;
-    // background-image: linear-gradient(45deg, #4c3af2, #e36c1d);
-    background: url("../assets/images/ship.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    border-radius: 50%;
-    padding: 5px;
-    p {
-      color: white;
-    }
+}
+
+// .courses_types:active .courses_type2 {
+//   animation: spin 2s linear infinite;
+// }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
   }
-  .courses_type2 {
-    margin-bottom: 20px;
-    font-family: "Cairo-Medium";
-    text-align: center;
-    // background-image: linear-gradient(45deg, #4c3af2, #e36c1d);
-    background: url("../assets/images/ship.jpg");
-    background-size: cover;
+}
+.rainbow {
+  position: relative;
+  z-index: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #d9770b;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    p {
-      color: white;
-    }
-  }
-  .courses_type3 {
-    background: url("../assets/images/airport-1152251_640.jpg");
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(45deg, #721296, transparent);
+    animation: rotate 4s linear infinite;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background-image: url("../assets/images/ship.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 5px;
+  }
 }
 </style>

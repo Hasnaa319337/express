@@ -50,16 +50,15 @@
         </div>
       </v-carousel-item>
     </v-carousel>
-  
-
-  
-  
-  
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {};
+  },
+  components: {},
   methods: {},
 };
 </script>
@@ -195,5 +194,4 @@ export default {
     left: 29%;
   }
 }
-
 </style>
