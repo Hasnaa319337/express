@@ -118,9 +118,9 @@ padding-top: 3px;
   }
   .whous_contain a {
     font-size: 12px;
-
-    width: 100px;
-    height: 30px;
+    width: 90px;
+    height: 26px;
+    margin-top: 10px;
   }
 }
 </style>
