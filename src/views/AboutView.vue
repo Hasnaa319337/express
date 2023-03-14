@@ -33,6 +33,7 @@ import HeadCard from "../components/HeadCard.vue";
     font-family: Cairo-ExtraBold;
     font-size: 24px;
     margin: 20px 0;
+    color: #150f4e;
   }
   .info {
     color: #313131;

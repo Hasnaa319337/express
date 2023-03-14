@@ -3,43 +3,64 @@
     <v-container>
       <h3 class="main_head">مجان للشحن</h3>
 
-      <div class="express_types">
-        <div
-          class="express_type first"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="overlay">
-            <div class="logo">
-              <span>{{ $t('misc.seaFreight') }} </span>
-              <v-icon icon="mdi-ferry" />
+      <v-row class="express_types">
+        <v-col cols="12" lg="4" md="4" sm="6" xs="12">
+          <div
+            class="express_type first"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+          >
+            <div class="overlay">
+              <div class="logo">
+                <span>{{ $t("misc.seaFreight") }} </span>
+                <v-icon icon="mdi-ferry" />
+              </div>
             </div>
           </div>
-        </div>
-
-        <div
-          class="express_type second"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="overlay">
-            <div class="logo">
-              <span>{{ $t('misc.airFreight') }} </span>
-              <v-icon icon="mdi-airplane" />
+        </v-col>
+        <v-col cols="12" lg="4" md="4" sm="6" xs="12">
+          <div
+            class="express_type second"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+          >
+            <div class="overlay">
+              <div class="logo">
+                <span>{{ $t("misc.airFreight") }} </span>
+                <v-icon icon="mdi-airplane" />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </v-col>
+        <v-col cols="12" lg="4" md="4" sm="6" xs="12"
+          ><div
+            class="express_type three"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+          >
+            <div class="overlay">
+              <div class="logo">
+                <span>{{ $t("misc.Land") }} </span>
+                <v-icon icon="mdi-truck" />
+              </div>
+            </div></div
+        ></v-col>
+      </v-row>
     </v-container>
   </duv>
 </template>
@@ -55,7 +76,7 @@ export default {
 <style scoped>
 .express_type {
   height: 400px;
-  width: 400px;
+  /* width: 400px; */
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -63,13 +84,10 @@ export default {
   text-align: center;
   position: relative;
   transition: 0.3s all linear;
-  margin: 20px;
+  /* margin: 20px 0; */
 }
 .express_types {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  /* column-gap: 10px; */
 }
 .first {
   background-image: url("../../assets/images/ship-express.jpg");
@@ -77,7 +95,9 @@ export default {
 .second {
   background-image: url("../../assets/images/air-express.jpg");
 }
-
+.three{
+  background-image: url("../../assets/images/land.jpg");
+}
 
 .overlay {
   background: black;

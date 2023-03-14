@@ -24,6 +24,11 @@
                 }}</router-link>
               </li>
               <li>
+                <router-link to="/courses">{{
+                  $t("navs.ourCourses")
+                }}</router-link>
+              </li>
+              <li>
                 <router-link to="/contact-us" @click="hideSideNav">
                   {{ $t("navs.contactUs") }}</router-link
                 >
@@ -64,6 +69,11 @@
                 }}</router-link>
               </li>
               <li>
+                <router-link to="/courses">{{
+                  $t("navs.ourCourses")
+                }}</router-link>
+              </li>
+              <li>
                 <router-link to="/contact-us">
                   {{ $t("navs.contactUs") }}</router-link
                 >
@@ -92,26 +102,9 @@ export default {
       sideNavIsVisable: false,
       searchIsVisable: false,
       checkClick: false,
-      myWidth: "170",
-      searchValue: "",
-      keyword: null,
+    
       visibleRight: false,
-      items: [
-        {
-          src: "/publishments",
-          text: "buttons.ads",
-          icon: "mdi-mailbox",
-        },
-        { src: "/my-auctions", text: "مزاداتي", icon: "mdi-gavel" },
-        { src: "/faqs", text: "الأسئلة الشائعة", icon: "mdi-help" },
-        {
-          src: "/privacy-policy",
-          text: "سياسة الخصوصية",
-          icon: "mdi-file-document-outline",
-        },
-      ],
-      image: null,
-      user_name: null,
+     
     };
   },
   computed: {
@@ -213,6 +206,7 @@ router-link {
 }
 .list{
   display: flex;
+  column-gap: 20px;
   
 }
 
@@ -524,7 +518,7 @@ li {
   font-size: 15px;
   padding: 15px 0;
 
-  margin-right: 29px;
+
 }
 .hidden_list{
   flex-direction: column;

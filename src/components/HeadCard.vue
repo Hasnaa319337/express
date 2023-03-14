@@ -47,7 +47,7 @@ export default {
 
       if (this.myurl === "contact-us") {
         if (this.$i18n.locale == "ar") {
-          newURL = " اتصل بنا";
+          newURL = "تواصل معنا";
         } else {
           newURL = "Contact Us";
         }
@@ -69,6 +69,14 @@ export default {
           newURL = "خدماتنا ";
         } else {
           newURL = "Our Servies";
+        }
+        return newURL;
+      }
+      if (this.myurl === "courses") {
+        if (this.$i18n.locale == "ar") {
+          newURL = "الدورات ";
+        } else {
+          newURL = "Our Courses";
         }
         return newURL;
       }

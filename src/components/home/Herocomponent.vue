@@ -50,6 +50,11 @@
         </div>
       </v-carousel-item>
     </v-carousel>
+  
+
+  
+  
+  
   </div>
 </template>
 

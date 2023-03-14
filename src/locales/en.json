@@ -4,7 +4,8 @@
     "aboutUs": "About us",
     "ourServices": "Our Services",
     "contactUs": "Contact us",
-    "ourAddress": "Our Address "
+    "ourAddress": "Our Address ",
+    "ourCourses": "Our Courses"
   },
   "headers": {
     "aboutUs": "About us",
@@ -53,7 +54,7 @@
   },
 
   "misc": {
-    "About company":"About company",
+    "About company": "About company",
     "aboutInfo": "Our dedicated team will ensure a smooth and fast delivery of our systems with free shipping. You will always be aware of the current status of your shipment. Our Golden Service is to develop a comprehensive service and offer competitive pricing in order to meet customers' unique and specific needs. Our services cover the Sultanate of Oman and China.",
     "reason1": "Deliver Environmentally Responsible Client Services",
     "reason2": "Drive Continuous Improvement",
@@ -69,14 +70,19 @@
     "majanExpress": "Majan Express",
     "seaFreight": "Sea Freight",
     "airFreight": "Air Freight",
+    "Land": "Land shipping",
     "best": "Why we are the best",
-    "marqueeText": "We save our customers the trouble of matching between import and export companies, shipping companies, and customs clearance companies. We specialize in three fields",
+    "courses": "Courses",
+    "marqueeText": "Majan Shipping Company provides services such as (land freight, sea freight and air freight); It also offers a group of courses in the field of shipping, such as the import course from China, the Alibaba program for safe and successful import, and other specialized courses.",
     "fromPlace": "From your place to your destination we deliver our services on time safely",
     "majanOcean": "Majan Ocean Freight provides its customers with reliable services, efficient and Least Load (LTL) freighter services they require for their regional and domestic shipments.",
     "customerSupport": "customer support",
     "trustedFranchise": "trusted franchise",
     "FreeConsulting": "Consulting services",
     "Reliability": "Reliability and punctuality",
+    "type1": "The import course from China and the Alibaba program for safe and successful import",
+    "type2": "specialized courses",
+
     "Email": "Email",
     "Contact": "Contact Us",
     "timeWork": "Work Time",
@@ -85,6 +91,10 @@
     "Saturday": "Saturday",
     "contactDirect": "Contact us directly",
     "contactDaily": "Contact us directly if you have any questions or inquiries, do not hesitate to contact us or send us a message, we will answer you within 24 hours!",
-    "quality": "Quality and performance at the right price"
+    "quality": "Quality and performance at the right price",
+    "courseText": "The Shipping Problems course deals with the most important export problems that you face, starting with the internal and external difficulties in shipping operations, passing through transportation problems and the documents required for export, as well as dealing with shipping lines, airlines and land transport, in addition to the problems of export ports and ports of arrival in the country of import.",
+    "serviceShip": "Majan Express Ocean Freight provides customers with the reliable and efficient truckload and less than cargo services they need for their regional and domestic shipments.",
+    "servicePlane": "Across our global network, you can choose the service that best suits your needs, Majan Express can handle your air freight shipment to and from anywhere across China, Turkey and Oman through our global partners and agents.",
+    "serviceLand": "Majan Express Land Cargo provides customers with the reliable and efficient truckload and less than load services they need for their regional and domestic shipments."
   }
 }
