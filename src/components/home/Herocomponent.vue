@@ -25,7 +25,6 @@
     <div class="carousel-inner">
       <div class="carousel-item">
         <img src="../../assets/images/hero1.jpg" class="d-block w-100" />
-      
       </div>
       <div class="carousel-item active">
         <img
@@ -70,5 +69,11 @@ export default {};
     .contain {
     }
   }
+}
+.carousel-control-prev {
+  display: none;
+}
+.carousel-control-next{
+  display: none;
 }
 </style>

@@ -11,16 +11,12 @@
         data-aos-mirror="true"
         data-aos-once="true"
       >
-        <h4>{{ $t('misc.majanExpress') }}</h4>
-        <p>{{ $t('misc.learnAboutUs') }}
-          
-        </p>
+        <h4>{{ $t("misc.majanExpress") }}</h4>
+        <p>{{ $t("misc.learnAboutUs") }}</p>
         <router-link to="/about" class="btn btn-border-4">
-         
-          {{ $t('buttons.learnAbout') }}
+          {{ $t("buttons.learnAbout") }}
         </router-link>
       </div>
- 
     </div>
   </div>
 </template>
@@ -102,10 +98,11 @@ export default {};
     margin: 5px 0;
   }
   .whous_contain a {
-    font-size: 16px;
-padding-top: 3px;
+    font-size: 13px;
+    padding-top: 3px;
     width: 120px;
     height: 30px;
+    margin-top: 10px;
   }
 }
 @media (max-width: 380px) {
@@ -118,9 +115,10 @@ padding-top: 3px;
   }
   .whous_contain a {
     font-size: 12px;
-    width: 90px;
-    height: 26px;
+    width: auto;
+    height: auto;
     margin-top: 10px;
+    text-align: center;
   }
 }
 </style>

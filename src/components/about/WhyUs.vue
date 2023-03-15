@@ -20,23 +20,7 @@
             <p>{{ $t("misc.reason1") }}</p>
           </div>
         </div>
-        <div
-          class="reason"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="icon">
-            <v-icon icon="mdi-check" />
-          </div>
-          <div class="contain">
-            <p>{{ $t("misc.reason8") }}</p>
-          </div>
-        </div>
+     
         <div
           class="reason"
           data-aos="fade-up"
