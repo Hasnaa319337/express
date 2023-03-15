@@ -17,23 +17,28 @@ body::-webkit-scrollbar-thumb {
 
 @font-face {
   font-family: "Cairo-Bold";
-  src: local("Cairo"), url(./fonts/Cairo-Bold.ttf) format("truetype");
+  src: local("Cairo"),
+    url(./fonts/Cairo/static/Cairo-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Cairo-SemiBold";
-  src: local("Cairo"), url(./fonts/Cairo-SemiBold.ttf) format("truetype");
+  src: local("Cairo"),
+    url(./fonts/Cairo/static/Cairo-SemiBold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Cairo-Regular";
-  src: local("Cairo"), url(./fonts/Cairo-Regular.ttf) format("truetype");
+  src: local("Cairo"),
+    url(./fonts/Cairo/static/Cairo-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "Cairo-Medium";
-  src: local("Cairo"), url(./fonts/Cairo-Medium.ttf) format("truetype");
+  src: local("Cairo"),
+    url(./fonts/Cairo/static/Cairo-Medium.ttf) format("truetype");
 }
 @font-face {
   font-family: "Cairo-ExtraBold";
-  src: local("Cairo"), url(./fonts/Cairo-ExtraBold.ttf) format("truetype");
+  src: local("Cairo"),
+    url(./fonts/Cairo/static/Cairo-ExtraBold.ttf) format("truetype");
 }
 
 /* global btn */

@@ -1,9 +1,9 @@
 <template>
   <div class="marquee">
-    <marquee direction="right" scrollamount="12" v-if="this.$i18n.locale == 'ar'"
+    <marquee direction="right" scrollamount="8" v-if="this.$i18n.locale == 'ar'"
       >{{ $t("misc.marqueeText") }}
     </marquee>
-    <marquee direction="left" scrollamount="12" v-if="this.$i18n.locale == 'en'"
+    <marquee direction="left" scrollamount="8" v-if="this.$i18n.locale == 'en'"
       >{{ $t("misc.marqueeText") }}
     </marquee>
   </div>
