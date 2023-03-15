@@ -116,7 +116,7 @@ export default {
       }
     }
   }
-  @media (max-width: 300px) {
+  @media (max-width: 350px) {
     .big_size {
       
       label {
