@@ -25,9 +25,16 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-
 import { mdi } from "vuetify/iconsets/mdi";
 import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
+
+const vuetify = createVuetify({
+  components,
+  directives,
+  icons: {
+    defaultSet: "mdi",
+  },
+});
 
 //primeVue
 import "primevue/resources/themes/saga-blue/theme.css"; //theme
@@ -45,32 +52,16 @@ const i18n = createI18n({
   locale: Cookies.get("locale") || "ar",
   fallbackLocale: Cookies.get("locale") || "ar",
   messages: messages,
-  // locale: "en",
-  // fallbackLocale: "en",
-  // availableLocales: ["en", "ar"],
-  // messages: messages,
-});
-
-const vuetify = createVuetify({
-  components,
-  directives,
-  icons: {
-    defaultSet: "mdi",
-  },
 });
 
 const app = createApp(App);
 
 app.use(i18n);
-
-// app.use(store);
 app.use(router);
 app.use(vuetify);
 app.use(VueAxios, axios);
-
 app.use(VueSocialSharing);
 app.use(bootstrap);
-
 // primevue
 app.use(PrimeVue);
 
