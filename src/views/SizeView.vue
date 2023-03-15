@@ -50,10 +50,10 @@ export default {
 
 <style lang="scss">
 .big_size {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
   .calc_size {
     display: flex;
     justify-content: center;
@@ -61,15 +61,12 @@ export default {
     justify-items: center;
     flex-direction: column;
     column-gap: 20px;
-
     width: 70%;
     padding: 20px 0;
-
     margin-block: 15px;
     border-radius: 16px;
     border: 1px solid #e9e8e8;
     box-shadow: 0 0 10px 2px #e1e1e199;
-
     margin: 0 10px;
 
     .form-group {
@@ -89,6 +86,21 @@ export default {
       text-align: center;
       // height: 30px;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .big_size {
+    width: 100%;
+
+    input {
+      width: 150px;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .big_size    .p-inputtext {
+    width: 100px;
   }
 }
 </style>
