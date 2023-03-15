@@ -62,7 +62,7 @@ export default {};
 
 <style lang="scss">
 .carousel-inner {
-  height: 500px;
+  // height: 500px;
   .carousel-item {
     background: url("../../assets/images/hero1.jpg");
     background-size: cover;
