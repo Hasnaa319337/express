@@ -99,8 +99,12 @@ export default {
   }
 }
 @media (max-width: 300px) {
-  .big_size    .p-inputtext {
-    width: 100px;
+  .big_size {
+    .p-inputtext {
+      width: 100px;
+    }
+    label {
+        font-size: 12px;}
   }
 }
 </style>
