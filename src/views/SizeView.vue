@@ -104,7 +104,8 @@ export default {
       width: 100px;
     }
     label {
-        font-size: 12px;}
+      font-size: 12px !important;
+    }
   }
 }
 </style>
