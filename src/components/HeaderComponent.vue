@@ -29,6 +29,11 @@
                 }}</router-link>
               </li>
               <li>
+                <router-link to="/size-calc" @click="hideSideNav">{{
+                  $t("navs.sizeCalc")
+                }}</router-link>
+              </li>
+              <li>
                 <router-link to="/contact-us" @click="hideSideNav">
                   {{ $t("navs.contactUs") }}</router-link
                 >
@@ -69,10 +74,19 @@
                 }}</router-link>
               </li>
               <li>
+                <router-link to="/size-calc">{{
+                  $t("navs.sizeCalc")
+                }}</router-link>
+              </li>
+              
+              <!--  -->
+              <li>
                 <router-link to="/courses">{{
                   $t("navs.ourCourses")
                 }}</router-link>
               </li>
+              <!--  -->
+              
               <li>
                 <router-link to="/contact-us">
                   {{ $t("navs.contactUs") }}</router-link
@@ -140,6 +154,7 @@ header {
   position: relative;
   // overflow: hidden;
   font-family: "Cairo-Bold", sans-serif;
+ 
 
   /* background-image: linear-gradient(45deg, #fefefe, #52004a); */
 }

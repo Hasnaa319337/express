@@ -1,6 +1,8 @@
 <template>
-  <!-- Carousel -->
-  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div class="hero">
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
       <button
@@ -53,13 +55,18 @@
       <span class="carousel-control-next-icon"></span>
     </button>
   </div>
+</div>
 </template>
 
 <script>
-export default {};
+
+export default { components: {  } };
 </script>
 
 <style lang="scss">
+.hero{
+  position: relative;
+}
 .carousel-inner {
   // height: 500px;
   .carousel-item {

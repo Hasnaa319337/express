@@ -5,7 +5,8 @@
     "ourServices": "Our Services",
     "contactUs": "Contact us",
     "ourAddress": "Our Address ",
-    "ourCourses": "Our Courses"
+    "ourCourses": "Our Courses",
+    "sizeCalc":"Calculating volume"
   },
   "headers": {
     "aboutUs": "About us",
@@ -63,7 +64,10 @@
     "reason5": "Be an Active Community Partner",
     "reason6": "We ensure complete security",
     "reason7": "Maintain High Ethical Standards",
-
+    "cm":"cm",
+    "lenght":"Enter Length",
+    "width":"Enter Width",
+    "height":"Enter Height",
     "why": "Why Us",
     "customerReviews": "customers Reviews",
     "learnAboutUs": "A documented group that provides many value-added services related to freight of all types (air and sea freight and internal delivery in the Sultanate of Oman)",

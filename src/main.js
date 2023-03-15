@@ -42,6 +42,8 @@ import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
 
 import PrimeVue from "primevue/config";
+import InputNumber from 'primevue/inputnumber';
+
 
 import Cookies from "js-cookie";
 import { createI18n } from "vue-i18n";
@@ -64,5 +66,5 @@ app.use(VueSocialSharing);
 app.use(bootstrap);
 // primevue
 app.use(PrimeVue);
-
+app.component("InputNumber",InputNumber)
 app.mount("#app");
