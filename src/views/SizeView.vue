@@ -74,6 +74,7 @@ export default {
 
     .form-group {
       text-align: center;
+      margin: 0 20px;
       label {
         font-size: 18px;
         font-family: "Cairo-SemiBold";
