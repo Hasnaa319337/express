@@ -46,7 +46,7 @@
       </div>
       <div class="carousel-item active">
         <img
-          src="../../assets/images/WhatsApp Image 2023-03-14 at 4.43.35 PM.jpeg"
+          src="../../assets/images/sea.jpeg"
           alt="Chicago"
           class="d-block w-100"
         />
