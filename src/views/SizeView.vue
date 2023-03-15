@@ -3,7 +3,7 @@
     <HeadCard />
     <v-container>
       <div class="big_size">
-        <div class="calc_size">
+        <v-form class="calc_size" @submit.prevent="calcSize">
           <div class="form-group">
             <label for="lenght">{{ $t("misc.lenght") }}</label>
 
@@ -34,7 +34,17 @@
               :useGrouping="false"
             />
           </div>
-        </div>
+          <div class="form-group">
+            <label for="quantity">{{ $t("misc.quantity") }}</label>
+
+            <InputNumber
+              v-model="quantity"
+              inputId="withoutgrouping"
+              :useGrouping="false"
+            />
+          </div>
+          <button class="confirm_btn" type="submit">{{ $t('misc.calc') }}</button>
+        </v-form>
       </div>
     </v-container>
   </div>
@@ -45,6 +55,14 @@ import HeadCard from "../components/HeadCard.vue";
 
 export default {
   components: { HeadCard },
+  data() {
+    return {
+      quantity: 1,
+      height: null,
+      weidth: null,
+      length: null,
+    };
+  },
 };
 </script>
 
@@ -78,34 +96,36 @@ export default {
         margin: 15px 0;
         display: block;
       }
-      input {
-      }
     }
     .p-inputtext {
       border: 2px solid #6c757d42;
       text-align: center;
-      // height: 30px;
+      &:focus {
+        box-shadow: none;
+        border-color: #fe8704;
+      }
     }
   }
-}
 
-@media (max-width: 500px) {
-  .big_size {
-    width: 100%;
+  @media (max-width: 500px) {
+    .big_size {
+      width: 100%;
 
-    input {
-      width: 150px;
+      input {
+        width: 150px;
+      }
     }
   }
-}
-@media (max-width: 300px) {
-  .big_size {
+  @media (max-width: 300px) {
+    .big_size {
+      
+      label {
+        font-size: 12px !important;
+      }
+    }
     .p-inputtext {
-      width: 100px;
-    }
-    label {
-      font-size: 12px !important;
-    }
+        width: 100px !important;
+      }
   }
 }
 </style>
