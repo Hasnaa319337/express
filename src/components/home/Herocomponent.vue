@@ -25,24 +25,7 @@
     <div class="carousel-inner">
       <div class="carousel-item">
         <img src="../../assets/images/hero1.jpg" class="d-block w-100" />
-        <div
-          class="slider_contain"
-          data-aos="fade-down"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <h3>{{ $t("misc.majanExpress") }}</h3>
-          <p>
-            {{ $t("misc.fromPlace") }}
-          </p>
-          <router-link to="/about" class="btn btn-border-4"
-            >{{ $t("buttons.Learn more") }}
-          </router-link>
-        </div>
+      
       </div>
       <div class="carousel-item active">
         <img
