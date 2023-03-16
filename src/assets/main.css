@@ -160,9 +160,3 @@ a {
 .confirm_btn:focus{
   outline: 0;
 }
-.marquee {
-  background: #436e8a;
-  color: white;
-  height: 5px;
-  padding: 0;
-}
