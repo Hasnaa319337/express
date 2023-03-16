@@ -440,6 +440,9 @@ export default {
 @media (max-width: 500px) {
     .table_container{
         width: 100%;
+        h3{
+            font-size: 15px;
+        }
         table{
             td{
                 font-size: 14px !important;
