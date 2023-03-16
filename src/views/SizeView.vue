@@ -415,6 +415,9 @@ export default {
     padding: 4px !important;
     font-size: 9px;
 }
+ .calc_size .result .final_result .span_div h2{
+    font-size: 15px;
+ }
   }
 }
 @media (max-width: 350px) {
