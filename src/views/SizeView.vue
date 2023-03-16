@@ -299,6 +299,7 @@ export default {
       justify-content: center;
       justify-items: center;
       flex-direction: column;
+      padding: 5px;
 
       .inputs {
         display: flex;
@@ -311,6 +312,7 @@ export default {
         div {
           border: 1px solid #e9e8e8;
           padding: 10px;
+          margin-bottom: 20px;
         }
       }
       .final_result {
@@ -318,6 +320,7 @@ export default {
         align-items: center;
         justify-content: center;
         justify-items: center;
+        flex-wrap: wrap;
         flex-direction: column;
         margin: 0px 0 25px;
         .span_div {
@@ -338,6 +341,8 @@ export default {
         height: 2px;
         background: #bbb;
         margin: 30px 0;
+        overflow: hidden;
+        margin: 0 2px;
       }
       .second_head {
         font-family: "Cairo-Medium";
@@ -366,6 +371,26 @@ export default {
   }
 }
 
+@media (max-width:800px) {
+    .calc_size{
+        width: 100%;
+        padding: 3px;
+
+        .result{
+            .inputs{
+                column-gap: 5px !important;
+            }
+            p{
+                font-size: 12px !important;
+            }
+        }
+        .confirm_btn{
+            padding: 6px 11px;
+    font-size: 11px;
+        }
+    }
+    
+}
 @media (max-width: 500px) {
   .big_size {
     width: 100%;
@@ -385,6 +410,11 @@ export default {
         }
       }
     }
+ .result .inputs div {
+  
+    padding: 4px !important;
+    font-size: 9px;
+}
   }
 }
 @media (max-width: 350px) {
@@ -396,5 +426,11 @@ export default {
   .input {
     width: 100px !important;
   }
+
+}
+@media (max-width: 290px) {
+    .big_size .calc_size .result p{
+        font-size:8px !important;
+    }
 }
 </style>
