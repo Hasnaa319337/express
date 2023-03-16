@@ -119,7 +119,8 @@
     "sizeInfo2": "You choose the appropriate unit of measurement for you, whether it is a centimeter or an inch, and then you enter the length of the carton, then its width, then its height, and at the end you enter the number, that is, the number of cartons you have, and the site will give you how many cubic meters your goods are equal to, that is, how many CBM you need in order to ship them, as the size of your goods may be It is small and you do not need a full container, so you can ship partially, and the size of the goods may be huge, so you need a large container or two small containers, and here are the container sizes commonly used in shipping companies."
   ,"sya":"Capacity",
   "size":"container volume",
-  "tabelHead":"Container sizes"
+  "tabelHead":"Container sizes",
+  "foot":"Foot"
   
   
   }

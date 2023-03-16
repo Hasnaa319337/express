@@ -184,19 +184,19 @@
               <td>{{ $t("misc.sya") }}</td>
             </tr>
             <tr style="background: #bbb">
-              <td>20 قدم</td>
+              <td>20 {{ $t('misc.foot') }}</td>
               <td>33 CBM</td>
             </tr>
             <tr style="background: #ccc">
-              <td>40 قدم</td>
+              <td>40 {{ $t('misc.foot') }}</td>
               <td>67.3 CBM</td>
             </tr>
             <tr style="background: #bbb">
-              <td>40 قدم High Cube</td>
+              <td>40 {{ $t('misc.foot') }} High Cube</td>
               <td>76 CBM</td>
             </tr>
             <tr style="background: #ccc">
-              <td>45 قدم High Cube</td>
+              <td>45 {{ $t('misc.foot') }} High Cube</td>
               <td>85.7 CBM</td>
             </tr>
           </table>
