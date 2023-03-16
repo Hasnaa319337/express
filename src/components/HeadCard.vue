@@ -103,7 +103,7 @@ export default {
   overflow: hidden;
   font-family: "Cairo-Bold", sans-serif;
   color: white;
-  height: 200px;
+  // height: 200px;
 
   .back {
     background: url("../assets/images/ship.jpg");

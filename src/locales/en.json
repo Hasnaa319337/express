@@ -6,7 +6,7 @@
     "contactUs": "Contact us",
     "ourAddress": "Our Address ",
     "ourCourses": "Our Courses",
-    "sizeCalc":"Calculating volume"
+    "sizeCalc": "Calculating volume"
   },
   "headers": {
     "aboutUs": "About us",
@@ -64,12 +64,22 @@
     "reason5": "Be an Active Community Partner",
     "reason6": "We ensure complete security",
     "reason7": "Maintain High Ethical Standards",
-    "cm":"cm",
-    "lenght":"Enter Length",
-    "width":"Enter Width",
-    "height":"Enter Height",
-    "quantity":"Quantity",
-    "calc":"calc",
+    "cm": "cm",
+    "inch": "inch",
+    "calculator": "CBM Calculator",
+    "enterLenght": "Enter Length",
+    "enterWidth": "Enter Width",
+    "enterHeight": "Enter Height",
+    "lenght": "Length",
+    "width": "Width",
+    "height": "Height",
+    "quantity": "Quantity",
+    "calc": "calc",
+    "chooseUnit": "Choose the unit of measure",
+    "inputs": "Inputs",
+    "result": "Result",
+    "resultText": "The volume of the commercial shipment in cubic metres",
+    "calcAgain": "Calculating Again",
     "why": "Why Us",
     "customerReviews": "customers Reviews",
     "learnAboutUs": "A documented group that provides many value-added services related to freight of all types (air and sea freight and internal delivery in the Sultanate of Oman)",
@@ -101,6 +111,11 @@
     "courseText": "The Shipping Problems course deals with the most important export problems that you face, starting with the internal and external difficulties in shipping operations, passing through transportation problems and the documents required for export, as well as dealing with shipping lines, airlines and land transport, in addition to the problems of export ports and ports of arrival in the country of import.",
     "serviceShip": "Majan Express Ocean Freight provides customers with the reliable and efficient truckload and less than cargo services they need for their regional and domestic shipments.",
     "servicePlane": "Across our global network, you can choose the service that best suits your needs, Majan Express can handle your air freight shipment to and from anywhere across China, Turkey and Oman through our global partners and agents.",
-    "serviceLand": "Majan Express Land Cargo provides customers with the reliable and efficient truckload and less than load services they need for their regional and domestic shipments."
+    "serviceLand": "Majan Express Land Cargo provides customers with the reliable and efficient truckload and less than load services they need for their regional and domestic shipments.",
+    "containerSize":"Container sizes",
+    "sizeHead1": "What is CBM",
+    "sizeHead2": "CBM calculation method",
+    "sizeInfo1": "The meaning of CBM is known in English as Cubic Meter, and in Arabic it is called the cubic meter, which is the product of multiplying length by width by height. This unit of measurement is used in shipping and clearance companies. When you ship products overseas by container (container), you calculate the packaging volume (carton) in cubic meters, and when you know the size of your goods.",
+    "sizeInfo2": "You choose the appropriate unit of measurement for you, whether it is a centimeter or an inch, and then you enter the length of the carton, then its width, then its height, and at the end you enter the number, that is, the number of cartons you have, and the site will give you how many cubic meters your goods are equal to, that is, how many CBM you need in order to ship them, as the size of your goods may be It is small and you do not need a full container, so you can ship partially, and the size of the goods may be huge, so you need a large container or two small containers, and here are the container sizes commonly used in shipping companies."
   }
 }
