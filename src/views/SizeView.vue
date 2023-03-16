@@ -175,6 +175,32 @@
             </div>
           </v-col>
         </v-row>
+
+        <div class="table_container">
+          <h3 class="calculator">{{ $t("misc.tabelHead") }}</h3>
+          <table class="table">
+            <tr style="background: #e37b0b">
+              <td>{{ $t("misc.size") }}</td>
+              <td>{{ $t("misc.sya") }}</td>
+            </tr>
+            <tr style="background: #bbb">
+              <td>20 قدم</td>
+              <td>33 CBM</td>
+            </tr>
+            <tr style="background: #ccc">
+              <td>40 قدم</td>
+              <td>67.3 CBM</td>
+            </tr>
+            <tr style="background: #bbb">
+              <td>40 قدم High Cube</td>
+              <td>76 CBM</td>
+            </tr>
+            <tr style="background: #ccc">
+              <td>45 قدم High Cube</td>
+              <td>85.7 CBM</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </v-container>
   </div>
@@ -369,39 +395,68 @@ export default {
       font-family: "Cairo-SemiBold";
     }
   }
+  .table_container {
+    width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    h3 {
+      margin: 30px 0;
+     
+    }
+    table {
+      text-align: center;
+      
+      td{
+        padding: 10px 0 !important;
+        font-family: "Cairo-Medium" !important;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
-@media (max-width:800px) {
-    .calc_size{
-        width: 100%;
-        padding: 3px;
+@media (max-width: 800px) {
+  .calc_size {
+    width: 100%;
+    padding: 3px;
 
-        .result{
-            .inputs{
-                column-gap: 5px !important;
-            }
-            p{
-                font-size: 12px !important;
-            }
-        }
-        .confirm_btn{
-            padding: 6px 11px;
-    font-size: 11px;
-        }
+    .result {
+      .inputs {
+        column-gap: 5px !important;
+      }
+      p {
+        font-size: 12px !important;
+      }
     }
-    
+    .confirm_btn {
+      padding: 6px 11px;
+      font-size: 11px;
+    }
+  }
 }
 @media (max-width: 500px) {
+    .table_container{
+        width: 100%;
+        table{
+            td{
+                font-size: 14px !important;
+            }
+        }
+
+    }
   .big_size {
     width: 100%;
 
-   form{
-    input {
-      width: 150px;
+    form {
+      input {
+        width: 150px;
+      }
     }
-   }
     .select {
-    //   column-gap: 0 !important;
+      //   column-gap: 0 !important;
       div {
         margin: 7px 0;
         input {
@@ -410,14 +465,13 @@ export default {
         }
       }
     }
- .result .inputs div {
-  
-    padding: 4px !important;
-    font-size: 9px;
-}
- .calc_size .result .final_result .span_div h2{
-    font-size: 15px;
- }
+    .result .inputs div {
+      padding: 4px !important;
+      font-size: 9px;
+    }
+    .calc_size .result .final_result .span_div h2 {
+      font-size: 15px;
+    }
   }
 }
 @media (max-width: 350px) {
@@ -429,11 +483,10 @@ export default {
   .input {
     width: 100px !important;
   }
-
 }
 @media (max-width: 290px) {
-    .big_size .calc_size .result p{
-        font-size:8px !important;
-    }
+  .big_size .calc_size .result p {
+    font-size: 8px !important;
+  }
 }
 </style>
