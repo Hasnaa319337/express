@@ -100,11 +100,11 @@ export default {
     top: -50%;
     width: 200%;
     height: 200%;
-    background-color: #d9770b;
+    background-color: #df903c;
     background-repeat: no-repeat;
     background-size: 50% 50%, 50% 50%;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(45deg, #721296, transparent);
+    background-image: linear-gradient(45deg, #3c32db, #df903c);
     animation: rotate 4s linear infinite;
   }
 
