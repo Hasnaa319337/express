@@ -98,7 +98,12 @@
     "Reliability": "Reliability and punctuality",
     "type1": "The import course from China and the Alibaba program for safe and successful import",
     "type2": "specialized courses",
-
+    "type3": "The first purchase course from Alibaba",
+    "opinions": "Some opinions about our courses",
+    "opinion1": "The course was beautiful and faithful, and explained the smallest details of the program",
+    "opinion2": "I tried so many times to order from the program, but I was afraid, but after this course, I understood the method of ordering, and everything became clear and simple.",
+    "opinion3":"I thought that the course was for personal websites only, but after the course, I thought about the commercial application",
+    "opinion4":"The style is more than wonderful in conveying information and the diversity in the style of presentation. I never felt bored once",
     "Email": "Email",
     "Contact": "Contact Us",
     "timeWork": "Work Time",
@@ -112,16 +117,14 @@
     "serviceShip": "Majan Express Ocean Freight provides customers with the reliable and efficient truckload and less than cargo services they need for their regional and domestic shipments.",
     "servicePlane": "Across our global network, you can choose the service that best suits your needs, Majan Express can handle your air freight shipment to and from anywhere across China, Turkey and Oman through our global partners and agents.",
     "serviceLand": "Majan Express Land Cargo provides customers with the reliable and efficient truckload and less than load services they need for their regional and domestic shipments.",
-    "containerSize":"Container sizes",
+    "containerSize": "Container sizes",
     "sizeHead1": "What is CBM",
     "sizeHead2": "CBM calculation method",
     "sizeInfo1": "The meaning of CBM is known in English as Cubic Meter, and in Arabic it is called the cubic meter, which is the product of multiplying length by width by height. This unit of measurement is used in shipping and clearance companies. When you ship products overseas by container (container), you calculate the packaging volume (carton) in cubic meters, and when you know the size of your goods.",
-    "sizeInfo2": "You choose the appropriate unit of measurement for you, whether it is a centimeter or an inch, and then you enter the length of the carton, then its width, then its height, and at the end you enter the number, that is, the number of cartons you have, and the site will give you how many cubic meters your goods are equal to, that is, how many CBM you need in order to ship them, as the size of your goods may be It is small and you do not need a full container, so you can ship partially, and the size of the goods may be huge, so you need a large container or two small containers, and here are the container sizes commonly used in shipping companies."
-  ,"sya":"Capacity",
-  "size":"container volume",
-  "tabelHead":"Container sizes",
-  "foot":"Foot"
-  
-  
+    "sizeInfo2": "You choose the appropriate unit of measurement for you, whether it is a centimeter or an inch, and then you enter the length of the carton, then its width, then its height, and at the end you enter the number, that is, the number of cartons you have, and the site will give you how many cubic meters your goods are equal to, that is, how many CBM you need in order to ship them, as the size of your goods may be It is small and you do not need a full container, so you can ship partially, and the size of the goods may be huge, so you need a large container or two small containers, and here are the container sizes commonly used in shipping companies.",
+    "sya": "Capacity",
+    "size": "container volume",
+    "tabelHead": "Container sizes",
+    "foot": "Foot"
   }
 }

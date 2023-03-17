@@ -67,7 +67,7 @@ export default { components: {  } };
 .hero{
   position: relative;
 }
-.carousel-inner {
+.hero .carousel-inner {
   // height: 500px;
   .carousel-item {
     background: url("../../assets/images/hero1.jpg");
@@ -77,10 +77,10 @@ export default { components: {  } };
     }
   }
 }
-.carousel-control-prev {
+.hero .carousel-control-prev {
   display: none;
 }
-.carousel-control-next{
+.hero .carousel-control-next{
   display: none;
 }
 </style>

@@ -8,7 +8,20 @@
       <div class="courses_types">
         <div
           class="courses_type1 rainbow"
-          data-aos="slide-left"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+        >
+          <p>{{ $t("misc.type3") }}</p>
+        </div>
+
+        <div
+          class="courses_type1 rainbow"
+          data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="100"
           data-aos-duration="1000"
@@ -21,7 +34,7 @@
 
         <div
           class="courses_type2 rainbow"
-          data-aos="slide-right"
+          data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="100"
           data-aos-duration="1000"
@@ -32,6 +45,70 @@
           <p>{{ $t("misc.type2") }}</p>
         </div>
       </div>
+
+      <!-- Start:: comments -->
+      <div class="comments">
+        <h2>{{ $t("misc.opinions") }}</h2>
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousal_contain">
+                <p>
+                  {{ $t('misc.opinion1') }}
+                </p>
+                <span>أميره عبدالسميع</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+                  {{ $t('misc.opinion2') }}
+                </p>
+                <span>دعاء علي</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+                  {{ $t('misc.opinion3') }}
+                </p>
+                <span>الزهراء محمد</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+                  {{ $t('misc.opinion4') }}
+                </p>
+                <span>حسناء عادل</span>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- End::comments -->
     </v-container>
   </div>
 </template>
@@ -68,9 +145,7 @@ export default {
   }
 }
 
-// .courses_types:active .courses_type2 {
-//   animation: spin 2s linear infinite;
-// }
+
 
 @keyframes rotate {
   100% {
@@ -120,6 +195,91 @@ export default {
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 5px;
+  }
+}
+
+.comments {
+  margin: 50px 0;
+  h2 {
+    margin-bottom: 40px;
+  }
+  .carousel-inner {
+    text-align: center;
+    color: white;
+    background: #211c4be6;
+    border-radius: 8px;
+    padding: 20px 10px;
+    height: 300px;
+
+    .carousel-item {
+      width: 100%;
+      height: 333px;
+      position: relative;
+    }
+
+    .carousal_contain {
+      text-align: center;
+      width: 50%;
+      position: absolute;
+      top: 20%;
+      left: 23%;
+
+      font-size: 20px;
+    }
+    .carousal_contain p {
+      // text-align: justify;
+      // width: 92%;
+    }
+    .carousal_contain span {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+      color: #fe8704;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .carousal_contain {
+    font-size: 18px;
+  }
+}
+@media (max-width: 415px) {
+  .carousel-inner {
+    padding: 5px !important;
+    height:100% !important;
+    .carousal_contain {
+      font-size: 16px;
+      top: 7% !important;
+
+      span {
+        margin: 10px 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .carousel-inner {
+    padding: 5px !important;
+    height:100% !important;
+    .carousal_contain {
+      font-size: 16px !important;
+      top: 26% !important;
+      span {
+        margin: 5px 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-inner {
+ 
+    .carousal_contain {
+     
+      top: 10% !important;
+      
+    }
   }
 }
 </style>
