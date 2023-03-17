@@ -100,10 +100,12 @@
     "type2": "specialized courses",
     "type3": "The first purchase course from Alibaba",
     "opinions": "Some opinions about our courses",
-    "opinion1": "The course was beautiful and faithful, and explained the smallest details of the program",
-    "opinion2": "I tried so many times to order from the program, but I was afraid, but after this course, I understood the method of ordering, and everything became clear and simple.",
-    "opinion3":"I thought that the course was for personal websites only, but after the course, I thought about the commercial application",
-    "opinion4":"The style is more than wonderful in conveying information and the diversity in the style of presentation. I never felt bored once",
+   
+    "opinion1":"الدورة كانت جميله و وفيه و وضحت فيها اصغر التفاصيل الخاصه بالبرنامج",
+    "opinion2":"حاولت كذا مره اطلب من البرنامج بس كنت متخوفه و لكن بعد هذه الدوره فهمت طريقه الطلب و اصبح كل شى واضح و بسيط",
+    "opinion3":"كنت اعتقد ان الدوره للمواقع الشخصيه فقط بس بعد الدوره فكرت بالطلب التجاري",
+    "opinion4":"اسلوب اكثر من رائع في نقل المعلومه وتنوع في اسلوب العرض ابدا ما حسيت بالملل ",
+   
     "Email": "Email",
     "Contact": "Contact Us",
     "timeWork": "Work Time",
