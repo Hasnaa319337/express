@@ -227,7 +227,7 @@ export default {
       font-size: 20px;
     }
     .carousal_contain p {
-      // text-align: justify;
+      text-align: justify;
       // width: 92%;
     }
     .carousal_contain span {
