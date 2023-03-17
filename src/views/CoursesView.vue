@@ -84,7 +84,7 @@
                 <p>
                   {{ $t('misc.opinion4') }}
                 </p>
-                <span>نور عادل</span>
+                <span>نور محمد</span>
               </div>
             </div>
           </div>
