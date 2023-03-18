@@ -8,7 +8,8 @@
 
         <div class="info">
           <p>
-           {{ $t('misc.aboutInfo') }}
+           {{ $t('misc.aboutInfo') }}<br/>
+           {{ $t('misc.aboutInfo2') }}
           </p>
         </div>
       </v-container>

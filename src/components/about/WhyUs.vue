@@ -55,74 +55,7 @@
             <p>{{ $t("misc.reason3") }}</p>
           </div>
         </div>
-        <div
-          class="reason"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="icon">
-            <v-icon icon="mdi-check" />
-          </div>
-          <div class="contain">
-            <p>{{ $t("misc.reason4") }}</p>
-          </div>
-        </div>
-        <div
-          class="reason"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="icon">
-            <v-icon icon="mdi-check" />
-          </div>
-          <div class="contain">
-            <p>{{ $t("misc.reason5") }}</p>
-          </div>
-        </div>
-        <div
-          class="reason"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="icon">
-            <v-icon icon="mdi-check" />
-          </div>
-          <div class="contain">
-            <p>{{ $t("misc.reason6") }}</p>
-          </div>
-        </div>
-        <div
-          class="reason"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <div class="icon">
-            <v-icon icon="mdi-check" />
-          </div>
-          <div class="contain">
-            <p>{{ $t("misc.reason7") }}</p>
-          </div>
-        </div>
+ 
       </div>
     </v-container>
   </div>

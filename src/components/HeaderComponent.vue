@@ -205,7 +205,7 @@ router-link {
     &:hover::after,
     &:active::after {
       transition: all 0.4s ease-in-out;
-      background-color: black;
+      background-color: #f08412;
       width: 100%;
     }
   }
@@ -214,7 +214,7 @@ router-link {
     &::after {
       left: 0;
       transition: all 0.4s ease-in-out;
-      background-color: black;
+      background-color: #f08412;
       width: 100%;
     }
   }

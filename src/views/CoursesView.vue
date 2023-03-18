@@ -3,21 +3,16 @@
   <div class="courses">
     <v-container>
       <h2>{{ $t("misc.courses") }}</h2>
+      <!-- <h5>{{ $t("misc.coursesHead") }}</h5> -->
+      
       <p class="text">{{ $t("misc.courseText") }}</p>
+      <p class="">{{ $t("misc.courseText1") }}</p>
+      <p class="">{{ $t("misc.courseText2") }}</p>
+
+
 
       <div class="courses_types">
-        <div
-          class="courses_type1 rainbow"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <p>{{ $t("misc.type3") }}</p>
-        </div>
+     
 
         <div
           class="courses_type1 rainbow"
@@ -60,7 +55,7 @@
                 <p>
                   {{ $t('misc.opinion1') }}
                 </p>
-                <span>أميره عبدالسميع</span>
+                <span>مشترك 1</span>
               </div>
             </div>
             <div class="carousel-item">
@@ -68,7 +63,7 @@
                 <p>
                   {{ $t('misc.opinion2') }}
                 </p>
-                <span>دعاء علي</span>
+                <span> مشترك 2</span>
               </div>
             </div>
             <div class="carousel-item">
@@ -76,7 +71,7 @@
                 <p>
                   {{ $t('misc.opinion3') }}
                 </p>
-                <span>الزهراء محمد</span>
+                <span>مشترك 3</span>
               </div>
             </div>
             <div class="carousel-item">
@@ -84,7 +79,39 @@
                 <p>
                   {{ $t('misc.opinion4') }}
                 </p>
-                <span>نور أحمد</span>
+                <span> مشترك 4</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+                  كنت اعتقد انه مثل المواقع الاخري بس طلع  عالم ثاني 
+                </p>
+                <span> مشترك 5</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+           متحمسه ادخل الموقع و اطلب طلبيتي بنفسي ; تعلمت عن البحث اكثر 
+                </p>
+                <span> مشترك 6</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+                   الشرح اكثر من رائع و كنتي طوال الوقت تبادلينا اذا فاهمين او لا  كأنها دردشه من دون قيود انها محاضره او شرح
+                </p>
+                <span>مشترك 7</span>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousal_contain">
+                <p>
+                  كنت متخوفه ان الوقت ما يكفي لكي افهم كل جوانب الاستيراد من الصين بس احس ان اللي عرفته كافي للبدء في تجربتي الاولي
+                </p>
+                <span>مشترك 8</span>
               </div>
             </div>
           </div>
@@ -153,6 +180,7 @@ export default {
   }
 }
 .rainbow {
+  margin-top: 50px;
   position: relative;
   z-index: 0;
   width: 300px;
