@@ -171,6 +171,7 @@ export default {
     flex-direction: column;
     p {
       font-weight: 900;
+      text-align: start;
     }
   }
   .courses_type2,
