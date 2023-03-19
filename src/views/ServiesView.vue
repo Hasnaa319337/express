@@ -76,9 +76,9 @@
               data-aos-mirror="true"
               data-aos-once="true"
               ><div class="courses_type4">
-                <p> * {{ $t("misc.servicePlane") }}</p>
+                <p>* {{ $t("misc.servicePlane") }}</p>
 
-                <p> * {{ $t("misc.servicePlane1") }}</p>
+                <p>* {{ $t("misc.servicePlane1") }}</p>
               </div>
               <marquee class="marquee"></marquee
             ></v-col>
@@ -171,7 +171,7 @@ export default {
     flex-direction: column;
     p {
       font-weight: 900;
-      text-align: start;
+      text-align: start !important;
     }
   }
   .courses_type2,
