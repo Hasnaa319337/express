@@ -62,7 +62,7 @@ export default {
         {
           id: 4,
           name: "Aya Omer",
-          text: "أهنئكم علي الصدق و الامانه",
+          text: "أهنئكم علي الصدق و الامانه جربت غيركم علي اساس ارخص بس تعبونا لما وصل الغرض",
           image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdS9fe93wFAattcdepsN2_3aB0cvoGy5AGYg&usqp=CAU",
         },
