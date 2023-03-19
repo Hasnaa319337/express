@@ -40,7 +40,7 @@ export default {
         {
           id: 1,
           name: "Ahmed Ali",
-          text: "شركه ممتازه شكرا للعاملين بها و أنصح بالتعامل معها",
+          text: "حرفيا افضل شركه تعاملت معها",
           image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNa79qNZL_efDAd2mqL7MgYwH8vdHsdNb8_Q&usqp=CAU",
         },
@@ -48,7 +48,7 @@ export default {
         {
           id: 2,
           name: "samy Mohamed",
-          text: "شركه محترمه وحسن استقبال العملاء فى الفروع ممتاز",
+          text: "بصراحه ما عندي شي بس انتوا افضل شركه تعاملت معها من بين 5 شركات تعاملت معهم",
           image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUBjOnosNUz1zIv9hg2Bx_uuc4S-BK4bITQ&usqp=CAU",
         },
@@ -62,7 +62,7 @@ export default {
         {
           id: 4,
           name: "Aya Omer",
-          text: " مندوىبين محترمين شركه محترمه جدا و خدمه عملاء محترمه",
+          text: "أهنئكم علي الصدق و الامانه",
           image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdS9fe93wFAattcdepsN2_3aB0cvoGy5AGYg&usqp=CAU",
         },
