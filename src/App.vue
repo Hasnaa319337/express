@@ -19,6 +19,7 @@
 </template>
 
 <script>
+// import '$i18n';
 import FooterComponent from "./components/FooterComponent.vue";
 
 import HomeView from "./views/HomeView.vue";

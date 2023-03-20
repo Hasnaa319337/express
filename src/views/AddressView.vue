@@ -44,7 +44,6 @@
             </div>
 
             <marquee class="marquee"></marquee>
-            
           </v-col>
           <v-col
             cols="12"
@@ -69,22 +68,23 @@
           </v-col>
         </v-row>
       </div>
-      <div></div>
+      <CalculateVolume />
     </v-container>
   </div>
 </template>
 
 <script>
-import HeadCard from "../components/HeadCard.vue";
+import CalculateVolume from "@/components/air/CalculateVolume.vue";
+import HeadCard from "@/components/HeadCard.vue";
 export default {
-  components: { HeadCard },
+  components: { HeadCard, CalculateVolume },
 };
 </script>
 
 <style lang="scss">
 .our_address {
   .contain {
-    margin-bottom: 60px;
+    margin: 40px 0;
     h5 {
       color: #508bb3;
       margin: 14px 0;

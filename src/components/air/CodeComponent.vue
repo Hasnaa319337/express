@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <div class="code">
-        <h3 class="calculator">{{ $t("misc.getYourCode") }}</h3>
+        <h3 class="calculator" style="margin:36px 0">{{ $t("misc.getYourCode") }}</h3>
         <div class="calc_size">
           <form @submit.prevent="getCode" v-if="visable_code">
             <div class="form-group">

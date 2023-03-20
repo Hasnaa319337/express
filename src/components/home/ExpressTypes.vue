@@ -4,24 +4,30 @@
       <h3 class="main_head">{{ $t("misc.majanExpress") }}</h3>
 
       <v-row class="express_types">
-        <v-col cols="12" lg="4" md="4" sm="6" xs="12">
-          <div
-            class="express_type first"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="100"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="true"
-          >
-            <div class="overlay">
-              <div class="logo">
-                <span>{{ $t("misc.seaFreight") }} </span>
-                <v-icon icon="mdi-ferry" />
+        <v-col
+          cols="12"
+          lg="4"
+          md="4"
+          sm="6"
+          xs="12"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+        >
+          <router-link to="/address">
+            <div class="express_type first">
+              <div class="overlay">
+                <div class="logo">
+                  <span>{{ $t("misc.seaFreight") }} </span>
+                  <v-icon icon="mdi-ferry" />
+                </div>
               </div>
             </div>
-          </div>
+          </router-link>
         </v-col>
         <v-col
           cols="12"
