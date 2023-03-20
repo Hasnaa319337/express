@@ -1,7 +1,7 @@
 <template>
-  <duv class="">
+  <div class="">
     <v-container>
-      <h3 class="main_head">مجان للشحن</h3>
+      <h3 class="main_head">{{ $t("misc.majanExpress") }}</h3>
 
       <v-row class="express_types">
         <v-col cols="12" lg="4" md="4" sm="6" xs="12">
@@ -23,24 +23,30 @@
             </div>
           </div>
         </v-col>
-        <v-col cols="12" lg="4" md="4" sm="6" xs="12">
-          <div
-            class="express_type second"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="100"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="true"
-          >
-            <div class="overlay">
-              <div class="logo">
-                <span>{{ $t("misc.airFreight") }} </span>
-                <v-icon icon="mdi-airplane" />
+        <v-col
+          cols="12"
+          lg="4"
+          md="4"
+          sm="6"
+          xs="12"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+        >
+          <router-link to="/airFreight">
+            <div class="express_type second">
+              <div class="overlay">
+                <div class="logo">
+                  <span>{{ $t("misc.airFreight") }} </span>
+                  <v-icon icon="mdi-airplane" />
+                </div>
               </div>
             </div>
-          </div>
+          </router-link>
         </v-col>
         <v-col cols="12" lg="4" md="4" sm="6" xs="12"
           ><div
@@ -62,7 +68,7 @@
         ></v-col>
       </v-row>
     </v-container>
-  </duv>
+  </div>
 </template>
 
 <script>
@@ -95,7 +101,7 @@ export default {
 .second {
   background-image: url("../../assets/images/air-express.jpg");
 }
-.three{
+.three {
   background-image: url("../../assets/images/land.jpg");
 }
 

@@ -45,6 +45,7 @@ import PrimeVue from "primevue/config";
 import InputNumber from 'primevue/inputnumber';
 
 
+
 import Cookies from "js-cookie";
 import { createI18n } from "vue-i18n";
 import messages from "@intlify/unplugin-vue-i18n/messages";
@@ -55,9 +56,23 @@ const i18n = createI18n({
   fallbackLocale: Cookies.get("locale") || "ar",
   messages: messages,
 });
+//tel
+import VueTelInput from 'vue3-tel-input'
+import 'vue3-tel-input/dist/vue3-tel-input.css'
+const VueTelInputOptions = {
+  mode: "international",
+  onlyCountries: ['NG', 'GH', "GB", "US", "CA"]
+};
+
+
+
+// import {registerLicense} from '@syncfusion/ej2-base';
+// registerLicense("ORg4AjUWIQA/Gnt2VVhiQlFaclxJVHxIe0x0RWFbb1x6cVZMYFVBNQtUQF1hS35bd0NjX31XcX1QR2FY")
+
+
 
 const app = createApp(App);
-
+app.use(VueTelInput, VueTelInputOptions); // Define default global options here (optional)
 app.use(i18n);
 app.use(router);
 app.use(vuetify);

@@ -28,11 +28,7 @@
                   $t("navs.ourCourses")
                 }}</router-link>
               </li>
-              <li>
-                <router-link to="/size-calc" @click="hideSideNav">{{
-                  $t("navs.sizeCalc")
-                }}</router-link>
-              </li>
+            
               <li>
                 <router-link to="/contact-us" @click="hideSideNav">
                   {{ $t("navs.contactUs") }}</router-link
@@ -73,11 +69,7 @@
                   $t("navs.ourAddress")
                 }}</router-link>
               </li>
-              <li>
-                <router-link to="/size-calc">{{
-                  $t("navs.sizeCalc")
-                }}</router-link>
-              </li>
+          
               
               <!--  -->
               <li>

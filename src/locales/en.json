@@ -55,6 +55,11 @@
   },
 
   "misc": {
+    "username":"Username",
+    "phone":"Phone",
+    "next":"Next",
+    "yourCode":"Your Code",
+    "getYourCode":"Get Your Code",
     "About company": "About company",
     "aboutInfo": "Majan Express Company is one of the Omani companies with more than five years of experience",
     "aboutInfo2": "As it proved its distinguished services to its customers, through which it ensures the smooth and easy operation of the import and shipping process",

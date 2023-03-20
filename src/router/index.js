@@ -35,9 +35,9 @@ const router = createRouter({
       component: () => import('../views/CoursesView.vue')
     },
     {
-      path: '/size-calc',
-      name: 'size-calc',
-      component: () => import('../views/SizeView.vue')
+      path: '/airFreight',
+      name: 'airFreight',
+      component: () => import('../views/AirFreight.vue')
     }
   ]
 })

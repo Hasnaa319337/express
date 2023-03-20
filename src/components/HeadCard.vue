@@ -80,11 +80,11 @@ export default {
         }
         return newURL;
       }
-      if (this.myurl === "size-calc") {
+      if (this.myurl === "airFreight") {
         if (this.$i18n.locale == "ar") {
-          newURL = "حساب الحجم ";
+          newURL = "الشحن الجوي";
         } else {
-          newURL = "Calculating volume";
+          newURL = "Air Freight";
         }
         return newURL;
       }
