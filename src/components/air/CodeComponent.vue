@@ -55,7 +55,7 @@ export default {
     getCode() {
       localStorage.setItem("username", this.username);
       localStorage.setItem("phone", this.phone);
-      this.code = Math.ceil(Math.random() * 100);
+      this.code = Math.ceil(Math.random() * 1000);
       localStorage.setItem("code", `MJN${this.code}`);
       this.visable_code = !this.visable_code;
 
