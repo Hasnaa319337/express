@@ -51,6 +51,9 @@ body::-webkit-scrollbar-thumb {
 .is_ltr {
   direction: ltr;
 }
+.app{
+  overflow: hidden;
+}
 .btn {
   position: relative;
   display: inline-block;
