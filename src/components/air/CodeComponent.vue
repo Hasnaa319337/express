@@ -98,7 +98,7 @@ export default {
 
     .form-group {
       text-align: center;
-      margin: 20px;
+      margin: 20px 0;
       width: 100%;
       input {
         border: 2px solid #6c757d42;
@@ -112,7 +112,7 @@ export default {
           outline: 0;
         }
         &::placeholder {
-          font-size: 14px !important;
+          font-size: 14px;
           // color:red
         }
       }
@@ -132,5 +132,16 @@ export default {
     border: 2px solid #bbbbbb42;
     padding: 7px;
   }
+}
+
+@media (max-width: 300px) {
+    .code input{
+        width: 60% !important;
+
+        &::placeholder{
+            font-size: 10px !important;
+          
+        }
+    }
 }
 </style>
