@@ -32,7 +32,7 @@
           </form>
           <div class="result" v-if="!visable_code">
             <h5 class="second_head">{{ $t("misc.yourCode") }}</h5>
-            <p>MJN{{ code }}</p>
+            <p class="mycode">MJN{{ code }}</p>
           </div>
         </div>
       </div>
@@ -126,6 +126,11 @@ export default {
       font-family: "Cairo-Bold";
       display: inline-block;
     }
+  }
+  .mycode {
+    margin: 13px 0;
+    border: 2px solid #bbbbbb42;
+    padding: 7px;
   }
 }
 </style>
