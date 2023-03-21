@@ -42,13 +42,15 @@ import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
 
 import PrimeVue from "primevue/config";
-import InputNumber from 'primevue/inputnumber';
-
-
+import InputNumber from "primevue/inputnumber";
 
 import Cookies from "js-cookie";
 import { createI18n } from "vue-i18n";
 import messages from "@intlify/unplugin-vue-i18n/messages";
+
+
+
+
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
@@ -57,22 +59,25 @@ const i18n = createI18n({
   messages: messages,
 });
 //tel
-import VueTelInput from 'vue3-tel-input'
-import 'vue3-tel-input/dist/vue3-tel-input.css'
-const VueTelInputOptions = {
-  mode: "international",
-  onlyCountries: ['NG', 'GH', "GB", "US", "CA"]
-};
+// import VueTelInput from "vue3-tel-input";
+// import "vue3-tel-input/dist/vue3-tel-input.css";
+// const VueTelInputOptions = {
+//   mode: "international",
+//   onlyCountries: ["NG", "GH", "GB", "US", "CA"],
+// };
 
 
 
-// import {registerLicense} from '@syncfusion/ej2-base';
-// registerLicense("ORg4AjUWIQA/Gnt2VVhiQlFaclxJVHxIe0x0RWFbb1x6cVZMYFVBNQtUQF1hS35bd0NjX31XcX1QR2FY")
+// import VueMaterial from "vue-material";
 
-
+// import ExportExcel from 'vue-3-export-excel'
+// import xlsx from "xlsx";
 
 const app = createApp(App);
-app.use(VueTelInput, VueTelInputOptions); // Define default global options here (optional)
+// app.use(VueTelInput, VueTelInputOptions); 
+// app.use(ExportExcel);  
+// app.use(VueMaterial);
+// app.use(xlsx);
 app.use(i18n);
 app.use(router);
 app.use(vuetify);
@@ -81,5 +86,5 @@ app.use(VueSocialSharing);
 app.use(bootstrap);
 // primevue
 app.use(PrimeVue);
-app.component("InputNumber",InputNumber)
+app.component("InputNumber", InputNumber);
 app.mount("#app");

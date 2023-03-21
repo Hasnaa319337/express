@@ -15,9 +15,9 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/address',
-      name: 'address',
-      component: () => import('../views/AddressView.vue')
+      path: '/seaFreight',
+      name: 'seaFreight',
+      component: () => import('../views/SeaFreight.vue')
     },
     {
       path: '/contact-us',

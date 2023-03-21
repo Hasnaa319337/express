@@ -96,6 +96,14 @@ export default {
         }
         return newURL;
       }
+      if (this.myurl === "seaFreight") {
+        if (this.$i18n.locale == "ar") {
+          newURL = "الشحن البحري";
+        } else {
+          newURL = "Sea Freight";
+        }
+        return newURL;
+      }
   
 
       

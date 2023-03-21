@@ -82,6 +82,7 @@ export default {};
   background: #232135e8;
   padding: 30px;
   color: white;
+  margin-top: 50px;
 }
 .contact_ways {
   display: flex;

@@ -18,7 +18,7 @@
           data-aos-mirror="true"
           data-aos-once="true"
         >
-          <router-link to="/address">
+          <router-link to="/seaFreight">
             <div class="express_type first">
               <div class="overlay">
                 <div class="logo">

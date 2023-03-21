@@ -18,11 +18,11 @@
                   $t("navs.ourServices")
                 }}</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <router-link to="/address" @click="hideSideNav">{{
                   $t("navs.ourAddress")
                 }}</router-link>
-              </li>
+              </li> -->
               <li>
                 <router-link to="/courses" @click="hideSideNav">{{
                   $t("navs.ourCourses")
@@ -68,11 +68,11 @@
                   $t("navs.ourServices")
                 }}</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <router-link to="/address">{{
                   $t("navs.ourAddress")
                 }}</router-link>
-              </li>
+              </li> -->
               <!-- <li>
                 <router-link to="/size-calc">{{
                   $t("navs.sizeCalc")

@@ -14,6 +14,7 @@
         data-aos-anchor-placement="top-center"
       ></router-view>
     </main>
+    <SubFooter/>
     <footer-component />
   </div>
 </template>
@@ -24,9 +25,10 @@ import FooterComponent from "./components/FooterComponent.vue";
 
 import HomeView from "./views/HomeView.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import SubFooter from "./components/home/SubFooter.vue";
 // import SubHeader from "./components/SubHeader.vue";
 export default {
-  components: { HomeView, FooterComponent, HeaderComponent },
+  components: { HomeView, FooterComponent, HeaderComponent, SubFooter },
   mounted() {
     if ($i18n.global.locale == "en") {
       document.body.dir = "ltr";
