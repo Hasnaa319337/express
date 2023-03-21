@@ -258,7 +258,7 @@ export default {
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   .code input {
     width: 60% !important;
 
