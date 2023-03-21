@@ -201,6 +201,7 @@ export default {
     font-family: "Cairo-Bold";
     margin: 20px 0;
     font-size: 22px;
+    text-align: center;
   }
   .calc_size {
     display: flex;
@@ -267,6 +268,12 @@ export default {
   }
   .second_head {
     font-size: 14px;
+  }
+ 
+}
+@media (max-width: 500px) {
+  .code .calculator{
+    font-size: 16px !important;  
   }
 }
 </style>
