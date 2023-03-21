@@ -54,24 +54,33 @@
             </div>
           </router-link>
         </v-col>
-        <v-col cols="12" lg="4" md="4" sm="6" xs="12"
-          ><div
-            class="express_type three"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="100"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="true"
+        <v-col
+          cols="12"
+          lg="4"
+          md="4"
+          sm="6"
+          xs="12"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
           >
+         <router-link to="/land">
+          <div class="express_type three">
             <div class="overlay">
               <div class="logo">
                 <span>{{ $t("misc.Land") }} </span>
                 <v-icon icon="mdi-truck" />
               </div>
-            </div></div
-        ></v-col>
+            </div>
+            </div>
+         </router-link>
+            
+            
+            </v-col>
       </v-row>
     </v-container>
   </div>

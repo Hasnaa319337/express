@@ -40,6 +40,11 @@ const router = createRouter({
       component: () => import('../views/AirFreight.vue')
     },
     {
+      path: '/land',
+      name: 'land',
+      component: () => import('../views/LandView.vue')
+    },
+    {
       path: '/size-calc',
       name: 'size-calc',
       component: () => import('../views/CalcSize.vue')

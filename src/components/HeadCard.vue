@@ -104,6 +104,14 @@ export default {
         }
         return newURL;
       }
+      if (this.myurl === "land") {
+        if (this.$i18n.locale == "ar") {
+          newURL = "الشحن البري";
+        } else {
+          newURL = "Land shipping";
+        }
+        return newURL;
+      }
   
 
       
