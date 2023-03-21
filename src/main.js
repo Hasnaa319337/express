@@ -58,26 +58,14 @@ const i18n = createI18n({
   fallbackLocale: Cookies.get("locale") || "ar",
   messages: messages,
 });
-//tel
-// import VueTelInput from "vue3-tel-input";
-// import "vue3-tel-input/dist/vue3-tel-input.css";
-// const VueTelInputOptions = {
-//   mode: "international",
-//   onlyCountries: ["NG", "GH", "GB", "US", "CA"],
-// };
 
 
 
-// import VueMaterial from "vue-material";
 
-// import ExportExcel from 'vue-3-export-excel'
-// import xlsx from "xlsx";
+
 
 const app = createApp(App);
-// app.use(VueTelInput, VueTelInputOptions); 
-// app.use(ExportExcel);  
-// app.use(VueMaterial);
-// app.use(xlsx);
+
 app.use(i18n);
 app.use(router);
 app.use(vuetify);
