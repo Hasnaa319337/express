@@ -61,6 +61,18 @@ const i18n = createI18n({
 
 
 
+//axios
+
+// import axios from "axios";
+// import VueAxios from "vue-axios";
+axios.defaults.baseURL = "https://admin.majanexpress.net/api/";
+
+
+axios.defaults.headers = {
+  // Authorization: `Bearer ${localStorage.getItem("speed_app_user_token")}`,
+  Accept: "application/json",
+  // "Accept-Language": i18n.global.locale,
+};
 
 
 

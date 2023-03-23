@@ -5,13 +5,17 @@
       <transition>
         <div class="overlay" @close="hideSideNav" v-if="sideNavIsVisable">
           <div class="close" @click="hideSideNav"></div>
-          <div class="list ">
+          <div class="list">
             <ul class="list hidden_list">
               <li>
-                <router-link to="/" @click="hideSideNav">{{ $t("navs.home") }}</router-link>
+                <router-link to="/" @click="hideSideNav">{{
+                  $t("navs.home")
+                }}</router-link>
               </li>
               <li>
-                <router-link to="/about" @click="hideSideNav"> {{ $t("navs.aboutUs") }}</router-link>
+                <router-link to="/about" @click="hideSideNav">
+                  {{ $t("navs.aboutUs") }}</router-link
+                >
               </li>
               <li>
                 <router-link to="/services" @click="hideSideNav">{{
@@ -48,10 +52,7 @@
         <div class="contain">
           <div class="logo">
             <router-link to="/">
-              <img
-                src="../assets/images/logo.png"
-                :alt="logo"
-              />
+              <img src="../assets/images/logo.png" :alt="logo" />
             </router-link>
           </div>
 
@@ -78,7 +79,7 @@
                   $t("navs.sizeCalc")
                 }}</router-link>
               </li> -->
-              
+
               <!--  -->
               <li>
                 <router-link to="/courses">{{
@@ -86,13 +87,38 @@
                 }}</router-link>
               </li>
               <!--  -->
-              
+
+              <!--  -->
+
+              <!--  -->
               <li>
                 <router-link to="/contact-us">
                   {{ $t("navs.contactUs") }}</router-link
                 >
               </li>
             </ul>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           <LanguageSelect />
@@ -116,9 +142,8 @@ export default {
       sideNavIsVisable: false,
       searchIsVisable: false,
       checkClick: false,
-    
+
       visibleRight: false,
-     
     };
   },
   computed: {
@@ -154,7 +179,6 @@ header {
   position: relative;
   // overflow: hidden;
   font-family: "Cairo-Bold", sans-serif;
- 
 
   /* background-image: linear-gradient(45deg, #fefefe, #52004a); */
 }
@@ -182,7 +206,7 @@ router-link {
 }
 
 .list {
-  a {
+  a,.dropdown-toggle {
     position: relative;
 
     &:hover {
@@ -219,10 +243,9 @@ router-link {
     }
   }
 }
-.list{
+.list {
   display: flex;
   column-gap: 20px;
-  
 }
 
 .list li {
@@ -532,11 +555,41 @@ li {
   padding: 15px 0;
   font-size: 15px;
   padding: 15px 0;
-
-
 }
-.hidden_list{
+.hidden_list {
   flex-direction: column;
   width: 100%;
 }
+
+nav {
+  display: flex;
+}
+
+.dropdown-toggle {
+    position: relative;
+
+    &:hover {
+      color: #313131;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0%;
+      display: block;
+      height: 2px;
+      width: 0%;
+      background-color: none;
+      border-radius: 8px;
+      transition: all 0.4s ease-in-out;
+      z-index: -20;
+    }
+    &:hover::after,
+    &:active::after {
+      transition: all 0.4s ease-in-out;
+      background-color: #f08412;
+      width: 100%;
+    }
+  }
 </style>

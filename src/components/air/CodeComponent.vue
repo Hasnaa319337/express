@@ -69,26 +69,26 @@
           {{ $t("misc.getYourCode") }}
         </h3>
         <h3 class="calculator" style="margin: 36px 0" v-if="!visable_code">
-         {{ $t('misc.picture') }}
+          {{ $t("misc.picture") }}
         </h3>
         <div class="calc_size">
           <form @submit.prevent="getCode" v-if="visable_code">
             <div class="form-group">
               <input
                 required
-                v-model="username"
+                v-model="name"
                 type="text"
                 :placeholder="$t('misc.username')"
               />
             </div>
             <!-- <vue-tel-input v-model="phone"></vue-tel-input> -->
+            <!--   maxlength="8"  -->
             <div class="form-group">
               <input
                 v-model="phone"
                 :placeholder="$t('misc.phone')"
                 required
                 minlength="8"
-                maxlength="8"
                 type="tel"
               />
             </div>
@@ -98,18 +98,18 @@
               </button>
             </div>
           </form>
-          <div class="result" v-if="!visable_code">
-            <p class="mycode">{{ username }}</p>
-            <p class="mycode">{{ phone }}</p>
+
+          <div class="" v-if="!visable_code">
+            <p class="mycode" style="text-align: center">{{ name }}</p>
+            <p class="mycode" style="text-align: center">{{ phone }}</p>
             <br />
             <h5 class="second_head">{{ $t("misc.yourCode") }}</h5>
 
-            <p class="mycode">OM-MJN{{ code }}</p>
+            <!-- <p class="mycode">OM-MJN{{ code }}</p> -->
+            <p class="mycode">{{ code }}</p>
           </div>
         </div>
       </div>
-
-    
     </v-container>
   </div>
 </template>
@@ -119,26 +119,39 @@
 export default {
   data() {
     return {
-      username: "",
+      name: "",
       phone: "",
       visable_code: true,
-      code: null,
-      customers: [],
+      code: 'OM-MJN'+ Math.ceil(Math.random() * 10000),
     };
   },
   methods: {
+
+
     getCode() {
-      localStorage.setItem("username", this.username);
-      localStorage.setItem("phone", this.phone);
-      this.code = Math.ceil(Math.random() * 1000);
-      localStorage.setItem("code", `OM-MJN${this.code}`);
-      this.visable_code = !this.visable_code;
-      this.customers.push(this.username, this.phone, `OM-MJN${this.code}`);
-      localStorage.setItem("customers", this.customers);
-      localStorage.getItem("customers");
+      const form = new FormData();
+      form.append("name", this.name);
+      form.append("phone", this.phone);
+      form.append("code", this.code);
+      this.axios({
+        method: "POST",
+        url: "getCode",
+        data: form,
+      })
+        .then((res) => {
+          this.visable_code = !this.visable_code;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
+  // form.append("code", this.code);
+// this.code = res.code;
+// this.code = Math.ceil(Math.random() * 1000);
+// localStorage.setItem("code", `OM-MJN${this.code}`);
+
 </script>
 
 <style lang="scss">
@@ -247,7 +260,7 @@ export default {
       font-family: "Cairo-Bold";
       display: inline-block;
     }
-    .second_head{
+    .second_head {
       margin: 5px 0;
     }
   }
@@ -269,11 +282,10 @@ export default {
   .second_head {
     font-size: 14px;
   }
- 
 }
 @media (max-width: 500px) {
-  .code .calculator{
-    font-size: 16px !important;  
+  .code .calculator {
+    font-size: 16px !important;
   }
 }
 </style>
