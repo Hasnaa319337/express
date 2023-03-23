@@ -97,7 +97,7 @@
                 >
               </li>
             </ul>
-            <div class="dropdown">
+            <!-- <div class="dropdown">
               <a
                 class="dropdown-toggle"
                 href="#"
@@ -118,7 +118,7 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </nav>
 
           <LanguageSelect />
