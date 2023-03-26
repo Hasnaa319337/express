@@ -90,7 +90,7 @@
     "seaFreight": "Sea Freight",
     "airFreight": "Air Freight",
     "Land": "Land shipping",
-    "agreement":"By agreement with the customer",
+    "agreement": "By agreement with the customer",
     "best": "All the services you would expect and more",
     "courses": "Courses",
     "coursesHead": "For a safe and successful import",
@@ -137,6 +137,10 @@
     "sya": "Capacity",
     "size": "container volume",
     "tabelHead": "Container sizes",
-    "foot": "Foot"
+    "foot": "Foot",
+    "track": "Track the shipment",
+    "trackShipmentChina": "Track your shipment in China",
+    "containerTracking": "Container Tracking",
+    "airFreightTracking": "Air Freight Tracking"
   }
 }

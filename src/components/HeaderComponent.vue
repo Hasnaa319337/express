@@ -97,7 +97,7 @@
                 >
               </li>
             </ul>
-            <!-- <div class="dropdown">
+            <!-- <div class="dropdown_list">
               <a
                 class="dropdown-toggle"
                 href="#"
@@ -106,17 +106,14 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown link
+             {{ $t('misc.track') }}
               </a>
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Another action</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
+                <li><router-link class="dropdown-item" to="/">{{ $t('misc.trackShipmentChina') }}</router-link></li>
+                <li><router-link class="dropdown-item" to="/">{{ $t('misc.containerTracking') }}</router-link></li>
+                <li><router-link class="dropdown-item" to="/airFreight">{{ $t('misc.airFreightTracking') }}</router-link></li>
+              
               </ul>
             </div> -->
           </nav>
@@ -206,7 +203,8 @@ router-link {
 }
 
 .list {
-  a,.dropdown-toggle {
+  a,
+  .dropdown-toggle {
     position: relative;
 
     &:hover {
@@ -465,8 +463,13 @@ router-link {
     display: none;
   }
   .contain {
-    display: grid;
-    grid-template-columns: repeat(3, 33% 33% 33%);
+    display: flex;
+   
+    justify-content: center !important;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0 13px;
     .logo {
       margin: auto;
     }
@@ -475,7 +478,7 @@ router-link {
     }
     .bars {
       margin: auto;
-      width: 50%;
+  
     }
   }
 }
@@ -566,30 +569,48 @@ nav {
 }
 
 .dropdown-toggle {
-    position: relative;
+  position: relative;
 
-    &:hover {
-      color: #313131;
-    }
+  &:hover {
+    color: #313131;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -13px;
-      left: 0%;
-      display: block;
-      height: 2px;
-      width: 0%;
-      background-color: none;
-      border-radius: 8px;
-      transition: all 0.4s ease-in-out;
-      z-index: -20;
-    }
-    &:hover::after,
-    &:active::after {
-      transition: all 0.4s ease-in-out;
-      background-color: #f08412;
-      width: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0%;
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: none;
+    border-radius: 8px;
+    transition: all 0.4s ease-in-out;
+    z-index: -20;
+  }
+  &:hover::after,
+  &:active::after {
+    transition: all 0.4s ease-in-out;
+    background-color: #f08412;
+    width: 100%;
+  }
+}
+
+.dropdown_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 0 16px;
+
+  ul{
+    margin: 6px 0px !important;
+    a{
+      color: #000 !important;
     }
   }
+  .dropdown-toggle{
+    color: #b6b6b6;
+  }
+}
 </style>

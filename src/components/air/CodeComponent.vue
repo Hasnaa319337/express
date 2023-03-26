@@ -122,7 +122,7 @@ export default {
       name: "",
       phone: "",
       visable_code: true,
-      code: 'OM-MJN'+ Math.ceil(Math.random() * 10000),
+      code: 'OM-MJN'+ Math.ceil(Math.random() * 1000),
     };
   },
   methods: {

@@ -131,6 +131,10 @@
     "sya": "السعة",
     "size": "حجم الحاوية",
     "tabelHead": "احجام حاويات الشحن Containers",
-    "foot": "قدم"
+    "foot": "قدم",
+    "track":"تتبع الشحنة",
+    "trackShipmentChina": "تتبع شحنتك فى الصين ",
+    "containerTracking": "تتبع الحاويه",
+    "airFreightTracking": "تتبع الشحن الجوى"
   }
 }
