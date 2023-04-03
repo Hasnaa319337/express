@@ -10,12 +10,15 @@
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
                 <span>{{ $t("misc.timeWork") }}</span>
-                <div class="contain">
-                  <p>
+                <div class="contain" v-for="setting in settings" :key="setting">
+                  <!-- <p>
                     {{ $t("misc.Sunday") }} - {{ $t("misc.Thursday") }} 09.00 -
                     18.00
                   </p>
-                  <p>{{ $t("misc.Saturday") }} 09.00 - 14.00</p>
+                  <p>{{ $t("misc.Saturday") }} 09.00 - 14.00</p> -->
+                  <p v-if="setting.locale == this.$i18n.locale" ref="work">
+                    {{ setting.work_hours }}
+                  </p>
                 </div>
               </v-col>
             </v-row>
@@ -27,15 +30,18 @@
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
                 <span>{{ $t("misc.Contact") }}</span>
-                <div class="contain">
-                  <p>95564020</p>
+                <div class="contain" v-for="setting in settings" :key="setting">
+                  <p v-if="setting.locale == this.$i18n.locale">
+                    {{ setting.phone }}
+                  </p>
 
                   <ul>
                     <li>
                       <ShareNetwork
                         network="facebook"
-                        url="https://m.facebook.com/MajanExpress/"
+                        :url="setting.facebook"
                         hashtags="vuejs,vite"
+                        v-if="setting.locale == this.$i18n.locale"
                       >
                         <v-icon icon="mdi-facebook"></v-icon>
                       </ShareNetwork>
@@ -43,8 +49,9 @@
                     <li>
                       <ShareNetwork
                         network="whatsapp"
-                        url="https://api.whatsapp.com/send/?phone=%2B96895564020&text&type=phone_number&app_absent=0"
+                        :url="setting.whatsapp"
                         hashtags="vuejs,vite"
+                        v-if="setting.locale == this.$i18n.locale"
                       >
                         <v-icon icon="mdi-whatsapp"></v-icon>
                       </ShareNetwork>
@@ -61,8 +68,10 @@
               </v-col>
               <v-col cols="12" lg="10" md="10" xs="10">
                 <span>{{ $t("misc.Email") }}</span>
-                <div class="contain">
-                  <p>Majanexpres@gmail.com</p>
+                <div class="contain" v-for="setting in settings" :key="setting">
+                  <p v-if="setting.locale == this.$i18n.locale">
+                    {{ setting.email }}
+                  </p>
                 </div>
               </v-col>
             </v-row>
@@ -74,7 +83,35 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      settings: [],
+   
+    };
+  },
+  methods: {
+    siteSettings() {
+      this.axios({
+        method: "GET",
+        url: "siteSetting",
+      })
+        .then((res) => {
+          this.settings = res.data.translations;
+          this.logo = res.data.logo;
+        
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.siteSettings();
+    
+  
+  },
+};
 </script>
 
 <style scoped>

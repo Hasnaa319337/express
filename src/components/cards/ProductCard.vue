@@ -1,9 +1,19 @@
 <template>
   <div class="product_card" v-if="review">
-    <img class="image_card" :src="review.image" />
+   
+    <img  class="image_card" :src="`https://admin.majanexpress.net${review.img}`" alt="" />
 
-    <h4 class="product_name">{{ review.name }}</h4>
-    <p>{{ review.text }}</p>
+    <template v-for="translation in review.translations" :key="translation">
+      <h4
+        class="product_name"
+        v-if="translation.locale == this.$i18n.locale"
+      >
+        {{ translation.name }}
+      </h4>
+      <p v-if="translation.locale == this.$i18n.locale">
+        {{ translation.content }}
+      </p>
+    </template>
   </div>
 </template>
 

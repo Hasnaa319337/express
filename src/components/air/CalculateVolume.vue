@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <v-container>
       <div class="big_size">
         <h3 class="calculator">{{ $t("misc.calculator") }}</h3>
@@ -165,13 +164,23 @@
           <v-col cols="12" lg="6" md="6" sm="12" xs="12">
             <div class="info">
               <h3 class="calculator">{{ $t("misc.sizeHead1") }}</h3>
-              <p>{{ $t("misc.sizeInfo1") }}</p>
+              <!-- <p>{{ $t("misc.sizeInfo1") }}</p> -->
+              <template v-for="translation in translations" :key="translation">
+                <p v-if="translation.locale == this.$i18n.locale">
+                  {{ translation.calc_cbm }}
+                </p>
+              </template>
             </div>
           </v-col>
           <v-col cols="12" lg="6" md="6" sm="12" xs="12">
             <div class="info">
               <h3 class="calculator">{{ $t("misc.sizeHead2") }}</h3>
-              <p>{{ $t("misc.sizeInfo2") }}</p>
+              <!-- <p>{{ $t("misc.sizeInfo2") }}</p> -->
+              <template v-for="translation in translations" :key="translation">
+                <p v-if="translation.locale == this.$i18n.locale">
+                  {{ translation.content_cbm }}
+                </p>
+              </template>
             </div>
           </v-col>
         </v-row>
@@ -207,10 +216,8 @@
 </template>
 
 <script>
-
-
 export default {
-  components: {  },
+  components: {},
   data() {
     return {
       quantity: 1,
@@ -221,6 +228,7 @@ export default {
       unit: "cm",
       visable_result: false,
       visable_calc: true,
+      translations: [],
     };
   },
   methods: {
@@ -252,6 +260,22 @@ export default {
       this.width = null;
       this.length = null;
     },
+    seaFreight() {
+      this.axios({
+        method: "GET",
+        url: "seaFreight",
+      })
+        .then((res) => {
+          this.translations = res.data.translations;
+          this.sea.img = res.data.img;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.seaFreight();
   },
 };
 </script>

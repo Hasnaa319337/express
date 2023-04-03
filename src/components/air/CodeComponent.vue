@@ -19,19 +19,19 @@
               data-aos-once="true"
             >
               <div class="address">
-                <h3>
-                  {{ $t("misc.airFreight") }} <v-icon icon="mdi-airplane" />
-                </h3>
-                <!-- <h5>Yiwu — china</h5> -->
-
-                <div>
-                  1. 海运/空运 广州仓库
-                  广州市白云区嘉禾街道鹤边员村北街东二巷3号 电话：13710231515
-                  联系人：孙伊博
-                </div>
+                <template
+                  v-for="translation in translations"
+                  :key="translation"
+                >
+                  <h3 v-if="translation.locale == this.$i18n.locale">
+                    {{ translation.name }} <v-icon icon="mdi-airplane" />
+                  </h3>
+                  <!-- <h5>Yiwu — china</h5> -->
+                  <div v-if="translation.locale == this.$i18n.locale">
+                    {{ translation.description }}
+                  </div>
+                </template>
               </div>
-
-              <!-- <marquee class="marquee"></marquee> -->
             </v-col>
             <v-col
               cols="12"
@@ -48,7 +48,8 @@
               data-aos-once="true"
             >
               <div class="image">
-                <img src="@/assets/images/airplane-3702676_640.jpg" alt="" />
+              
+                <img :src="`https://admin.majanexpress.net${air.img}`" alt="" />
               </div>
             </v-col>
           </v-row>
@@ -122,12 +123,16 @@ export default {
       name: "",
       phone: "",
       visable_code: true,
-      code: 'OM-MJN'+ Math.ceil(Math.random() * 1000),
+      code: "OM-MJN" + Math.ceil(Math.random() * 1000),
+      air: {
+     
+        img: null,
+  
+      },
+      translations: [],
     };
   },
   methods: {
-
-
     getCode() {
       const form = new FormData();
       form.append("name", this.name);
@@ -145,13 +150,28 @@ export default {
           console.log(error);
         });
     },
+    airFreight() {
+      this.axios({
+        method: "GET",
+        url: "airFreight",
+      })
+        .then((res) => {
+          this.translations = res.data.translations;
+          this.air.img = res.data.img;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.airFreight();
   },
 };
-  // form.append("code", this.code);
+// form.append("code", this.code);
 // this.code = res.code;
 // this.code = Math.ceil(Math.random() * 1000);
 // localStorage.setItem("code", `OM-MJN${this.code}`);
-
 </script>
 
 <style lang="scss">

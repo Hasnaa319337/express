@@ -15,10 +15,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
 
-//axios
 
-import axios from "axios";
-import VueAxios from "vue-axios";
 
 // Vuetify
 import "vuetify/styles";
@@ -40,44 +37,37 @@ const vuetify = createVuetify({
 import "primevue/resources/themes/saga-blue/theme.css"; //theme
 import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
-
 import PrimeVue from "primevue/config";
 import InputNumber from "primevue/inputnumber";
 
-import Cookies from "js-cookie";
-import { createI18n } from "vue-i18n";
-import messages from "@intlify/unplugin-vue-i18n/messages";
 
 
 
+// import messages from "@intlify/unplugin-vue-i18n/messages";
+// const i18n = createI18n({
+//   legacy: false,
+//   globalInjection: true,
+//   locale: Cookies.get("locale") || "ar",
+//   fallbackLocale: Cookies.get("locale") || "ar",
+//   messages: messages,
+// });
 
-const i18n = createI18n({
-  legacy: false,
-  globalInjection: true,
-  locale: Cookies.get("locale") || "ar",
-  fallbackLocale: Cookies.get("locale") || "ar",
-  messages: messages,
-});
 
 
 
 //axios
-
-// import axios from "axios";
-// import VueAxios from "vue-axios";
+import axios from "axios";
+import VueAxios from "vue-axios";
+import i18n from "./i18n"; 
+import Cookies from "js-cookie";
 axios.defaults.baseURL = "https://admin.majanexpress.net/api/";
 
-
 axios.defaults.headers = {
-  // Authorization: `Bearer ${localStorage.getItem("speed_app_user_token")}`,
   Accept: "application/json",
-  // "Accept-Language": i18n.global.locale,
+  "Accept-Language": Cookies.get('locale'),
 };
 
-
-
 const app = createApp(App);
-
 app.use(i18n);
 app.use(router);
 app.use(vuetify);

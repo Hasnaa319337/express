@@ -1,6 +1,9 @@
 <template>
   <div>
+    <!-- :style="{ 'background-image': url(`https://admin.majanexpress.net${truck}`) }" -->
     <div class="whous">
+      <!-- <img :src="`https://admin.majanexpress.net${truck}`" alt="" /> -->
+    <div class="whous" >
       <div
         class="whous_contain"
         data-aos="slide-left"
@@ -11,22 +14,31 @@
         data-aos-mirror="true"
         data-aos-once="true"
       >
-        <h4>{{ $t("misc.majanExpress") }}</h4>
-        <p>{{ $t("misc.learnAboutUs") }}</p>
+        <!-- <h4>{{ $t("misc.majanExpress") }}</h4> -->
+        <div v-for="setting in settings" :key="setting">
+          <h4 v-if="setting.locale == this.$i18n.locale">{{ setting.name }}</h4>
+          <p v-if="setting.locale == this.$i18n.locale">{{setting.description}}</p>
+        </div>
         <router-link to="/about" class="btn btn-border-4">
           {{ $t("buttons.learnAbout") }}
         </router-link>
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
-export default {};
+
+
+export default {
+  props: ["settings",'truck'],
+};
 </script>
 <style>
 .whous {
-  background-image: url("../../assets/images/car.jpg");
+  background-image: url("../../assets/images/car.jpg"); 
+ 
   background-size: cover;
   background-position: 50% 50%;
   height: 450px;

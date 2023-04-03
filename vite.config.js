@@ -13,6 +13,7 @@ export default defineConfig({
         "./src/locales/**"
       ),
     }),
+    // dynamicImport(),
   ],
 
   resolve: {

@@ -5,7 +5,7 @@
       <v-container>
         <h2>{{ $t("misc.quality") }}</h2>
 
-        <div class="courses_types">
+        <div class="courses_types" v-for="service in servicess" :key="service">
           <v-row>
             <v-col
               cols="12"
@@ -21,10 +21,14 @@
               data-aos-mirror="true"
               data-aos-once="true"
             >
-              <div class="courses_type1">
-                <p>* {{ $t("misc.serviceShip") }}</p>
-
-                <p>* {{ $t("misc.serviceShip1") }}</p>
+              <div
+                class="courses_type1"
+                v-for="ser in service.translations"
+                :key="ser"
+              >
+                <span v-if="ser.locale == this.$i18n.locale">{{
+                  ser.description
+                }}</span>
               </div>
               <marquee class="marquee"></marquee>
             </v-col>
@@ -45,7 +49,8 @@
               ><div class="courses_type2"></div
             ></v-col>
           </v-row>
-          <v-row>
+
+          <!-- <v-row>
             <v-col
               cols="12"
               lg="6"
@@ -121,7 +126,7 @@
               data-aos-once="true"
               ><div class="courses_type6"></div
             ></v-col>
-          </v-row>
+          </v-row> -->
         </div>
       </v-container>
     </div>
@@ -133,6 +138,32 @@ import HeadCard from "../components/HeadCard.vue";
 
 export default {
   components: { HeadCard },
+  data() {
+    return {
+      translations: [],
+      servicess: [],
+      img: null,
+    };
+  },
+  methods: {
+    services() {
+      this.axios({
+        method: "GET",
+        url: "siteService",
+      })
+        .then((res) => {
+          this.servicess = res.data;
+          this.img = res.data.img;
+          console.log(this.servicess);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.services();
+  },
 };
 </script>
 
@@ -159,7 +190,7 @@ export default {
   }
   .courses_type1,
   .courses_type4 {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     font-family: "Cairo-Medium";
     text-align: center;
     height: 300px;

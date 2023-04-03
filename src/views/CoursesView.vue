@@ -2,18 +2,16 @@
   <head-card />
   <div class="courses">
     <v-container>
-      <h2>{{ $t("misc.courses") }}</h2>
-      <!-- <h5>{{ $t("misc.coursesHead") }}</h5> -->
-      
-      <p class="text">{{ $t("misc.courseText") }}</p>
-      <p class="">{{ $t("misc.courseText1") }}</p>
-      <p class="">{{ $t("misc.courseText2") }}</p>
-
-
+      <template v-for="translation in courses" :key="translation">
+        <h2 v-if="translation.locale == this.$i18n.locale">
+          {{ translation.name }}
+        </h2>
+        <p v-if="translation.locale == this.$i18n.locale">
+          {{ translation.description }}
+        </p>
+      </template>
 
       <div class="courses_types">
-     
-
         <div
           class="courses_type1 rainbow"
           data-aos="fade-up"
@@ -49,73 +47,35 @@
           class="carousel slide"
           data-bs-ride="carousel"
         >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carousal_contain">
-                <p>
-                  {{ $t('misc.opinion1') }}
-                </p>
-                <span>مشترك 1</span>
+          <v-row class="carousel-inner">
+            <v-col
+              cols="12"
+              lg="3"
+              md="4"
+              sm="6"
+              xs="12"
+              v-for="comment in comments"
+              :key="comment.id"
+            >
+              <div id="carousel-item" class="carousel-item active">
+                <div class="carousal_contain">
+                  <div
+                    class=""
+                    v-for="translation in comment.translations"
+                    :key="translation"
+                  >
+                    <p v-if="translation.locale == this.$i18n.locale">
+                      {{ translation.content }}
+                    </p>
+                    <span v-if="translation.locale == this.$i18n.locale">
+                      {{ translation.name }}
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-                  {{ $t('misc.opinion2') }}
-                </p>
-                <span> مشترك 2</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-                  {{ $t('misc.opinion3') }}
-                </p>
-                <span>مشترك 3</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-                  {{ $t('misc.opinion4') }}
-                </p>
-                <span> مشترك 4</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-                  كنت اعتقد انه مثل المواقع الاخري بس طلع  عالم ثاني 
-                </p>
-                <span> مشترك 5</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-           متحمسه ادخل الموقع و اطلب طلبيتي بنفسي ; تعلمت عن البحث اكثر 
-                </p>
-                <span> مشترك 6</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-                   الشرح اكثر من رائع و كنتي طوال الوقت تبادلينا اذا فاهمين او لا  كأنها دردشه من دون قيود انها محاضره او شرح
-                </p>
-                <span>مشترك 7</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousal_contain">
-                <p>
-                  كنت متخوفه ان الوقت ما يكفي لكي افهم كل جوانب الاستيراد من الصين بس احس ان اللي عرفته كافي للبدء في تجربتي الاولي
-                </p>
-                <span>مشترك 8</span>
-              </div>
-            </div>
-          </div>
-          <button
+            </v-col>
+          </v-row>
+          <!-- <button
             class="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleControls"
@@ -132,7 +92,7 @@
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
+          </button> -->
         </div>
       </div>
       <!-- End::comments -->
@@ -144,10 +104,51 @@
 import HeadCard from "../components/HeadCard.vue";
 export default {
   components: { HeadCard },
+  data() {
+    return {
+      courses: [],
+      comments: [],
+    };
+  },
+  methods: {
+    courseReviews() {
+      this.axios({
+        method: "GET",
+        url: "courseReviews",
+      })
+        .then((res) => {
+          this.comments = res.data;
+          let element = document.getElementById("carousel-item");
+          element.classList.add("active");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    siteCourses() {
+      this.axios({
+        method: "GET",
+        url: "siteCourse",
+      })
+        .then((res) => {
+          this.courses = res.data.translations;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.courseReviews();
+    this.siteCourses();
+  },
 };
 </script>
 
 <style lang="scss">
+.active {
+  display: block;
+}
 .courses {
   text-align: center;
   font-size: 20px;
@@ -170,9 +171,10 @@ export default {
     align-items: center;
     column-gap: 50px;
   }
+  p {
+    line-height: 1.9;
+  }
 }
-
-
 
 @keyframes rotate {
   100% {
@@ -234,29 +236,36 @@ export default {
   .carousel-inner {
     text-align: center;
     color: white;
-    background: #211c4be6;
+    
     border-radius: 8px;
-    padding: 20px 10px;
-    height: 300px;
+    // padding: 20px 10px;
+    // height: 300px;
 
     .carousel-item {
       width: 100%;
-      height: 333px;
-      position: relative;
+      background: #211c4be6;
+      height: 280px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+  
+      &:first-of-type {
+        // display: block;
+      }
     }
 
     .carousal_contain {
       text-align: center;
-      width: 50%;
-      position: absolute;
-      top: 20%;
-      left: 23%;
 
-      font-size: 20px;
+    
+
+      font-size: 17px;
+      padding: 11px 0;
     }
     .carousal_contain p {
-      // text-align: justify;
-      // width: 92%;
     }
     .carousal_contain span {
       display: block;
@@ -274,7 +283,7 @@ export default {
 @media (max-width: 415px) {
   .carousel-inner {
     padding: 5px !important;
-    height:100% !important;
+    height: 100% !important;
     .carousal_contain {
       font-size: 16px;
       top: 7% !important;
@@ -289,7 +298,7 @@ export default {
 @media (max-width: 300px) {
   .carousel-inner {
     padding: 5px !important;
-    height:100% !important;
+    height: 100% !important;
     .carousal_contain {
       font-size: 16px !important;
       top: 26% !important;
@@ -302,11 +311,8 @@ export default {
 
 @media (max-width: 600px) {
   .carousel-inner {
- 
     .carousal_contain {
-     
       top: 10% !important;
-      
     }
   }
 }

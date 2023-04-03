@@ -19,10 +19,22 @@
             data-aos-once="true"
           >
             <div class="address">
-              <h3>{{ $t("misc.seaFreight") }} <v-icon icon="mdi-ferry" /></h3>
-              <h5>Yiwu — china</h5>
+              <template
+                    v-for="translation in translations"
+                    :key="translation"
+                  >
+                    <h3 v-if="translation.locale == this.$i18n.locale">
+                      {{ translation.name }} <v-icon icon="mdi-ferry" />
+                    </h3>
+                    <!-- <h5>Yiwu — china</h5> -->
+                    <div v-if="translation.locale == this.$i18n.locale">
+                      {{ translation.description }}
+                    </div>
+                  </template>
+           
+       
 
-              <span>
+              <!-- <span>
                 (海运仓库地址) 收货人：仓管(李锐) 18057931507
                 地址：浙江省金华市义乌市苏福路255号博尼B栋W05仓库。</span
               >
@@ -40,7 +52,7 @@
               <div>
                 4- 发货前请加17688269444
                 彭嘉俊微信⚠️确认后再发货否则仓库有权拒收，所产生的问题和费用由发货方承担。
-              </div>
+              </div> -->
             </div>
 
             <marquee class="marquee"></marquee>
@@ -60,10 +72,12 @@
             data-aos-once="true"
           >
             <div class="image">
-              <img
+              <!-- <img
                 src="../assets/images/container-ship-6631117_640.jpg"
                 alt=""
-              />
+              /> -->
+           
+              <img :src="`https://admin.majanexpress.net${sea.img}`" alt="" />
             </div>
           </v-col>
         </v-row>
@@ -78,6 +92,33 @@ import CalculateVolume from "@/components/air/CalculateVolume.vue";
 import HeadCard from "@/components/HeadCard.vue";
 export default {
   components: { HeadCard, CalculateVolume },
+  data() {
+    return {
+      sea: {
+        img: null,
+      },
+      translations: [],
+    }
+  },
+  methods: {
+    seaFreight() {
+      this.axios({
+        method: "GET",
+        url: "seaFreight",
+      })
+        .then((res) => {
+          this.translations = res.data.translations;
+          this.sea.img = res.data.img;
+        
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.seaFreight()
+  },
 };
 </script>
 

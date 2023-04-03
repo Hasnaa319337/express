@@ -4,24 +4,71 @@
 
     <div class="about">
       <v-container>
-        <h2>{{ $t("misc.About company") }}</h2>
+        <!-- <h2>{{ $t("misc.About company") }}</h2> -->
 
         <div class="info">
-          <p>
-           {{ $t('misc.aboutInfo') }}<br/>
-           {{ $t('misc.aboutInfo2') }}
-          </p>
+          <h2>{{ name }}</h2>
+          <p v-html="description"></p>
+          <!-- <p>
+            {{ $t("misc.aboutInfo") }}<br />
+            {{ $t("misc.aboutInfo2") }}
+          </p> -->
+        </div>
+        <div
+          class="info"
+          v-for="translation in translations"
+          :key="translation"
+        >
+          <h3 v-if="translation.locale == this.$i18n.locale">
+            {{ translation.name }}
+          </h3>
+
+          <div v-if="translation.locale == this.$i18n.locale">
+            {{ translation.description }}
+          </div>
         </div>
       </v-container>
     </div>
-    <WhyUs/>
-    <CustomerReviews/>
+    <WhyUs />
+    <CustomerReviews />
   </div>
 </template>
-<script setup>
+<script>
 import CustomerReviews from "../components/about/CustomerReviews.vue";
 import WhyUs from "../components/about/WhyUs.vue";
 import HeadCard from "../components/HeadCard.vue";
+
+export default {
+  components: {
+    CustomerReviews,
+    WhyUs,
+    HeadCard,
+  },
+  data() {
+    return {
+      translations: [],
+      img: null,
+    };
+  },
+
+  methods: {
+    getAboutData() {
+      this.axios({
+        method: "GET",
+        url: "siteAbout",
+      })
+        .then((res) => {
+          this.translations = res.data.translations;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.getAboutData();
+  },
+};
 </script>
 
 <style lang="scss">
@@ -38,7 +85,7 @@ import HeadCard from "../components/HeadCard.vue";
   }
   .info {
     color: #313131;
-    p{
+    p {
       line-height: 2;
     }
   }

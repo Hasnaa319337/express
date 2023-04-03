@@ -1,10 +1,12 @@
 <template>
   <div class="best">
     <v-container>
-      <h3 class="main_head">{{ $t('misc.best') }} </h3>
+      <h3 class="main_head">{{ $t("misc.best") }}</h3>
       <div class="reasons">
         <v-row>
           <v-col
+            v-for="el in home"
+            :key="el"
             cols="12"
             lang="6"
             md="6"
@@ -18,11 +20,18 @@
             data-aos-mirror="true"
             data-aos-once="true"
           >
-            <div class="reason reason1">
-              <span>{{ $t('misc.customerSupport') }}</span> <v-icon icon="mdi-face-agent" />
+            <div
+              class="reason reason1"
+              
+            >
+              <template v-for="trans in el.translations"
+              :key="trans">
+                <span  v-if="trans.locale == this.$i18n.locale">{{ trans.course_name }}</span>
+                <v-icon :icon="el.icon"  v-if="trans.locale == this.$i18n.locale"/>
+              </template>
             </div>
           </v-col>
-          <v-col
+          <!-- <v-col
             cols="12"
             lang="6"
             md="6"
@@ -78,7 +87,7 @@
               <span>{{ $t('misc.trustedFranchise') }}</span>
               <v-icon icon="mdi-timer-cog-outline" />
             </div>
-          </v-col>
+          </v-col> -->
         </v-row>
       </div>
     </v-container>
@@ -86,7 +95,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["home"],
+};
 </script>
 
 <style scoped>
@@ -113,13 +124,13 @@ export default {};
 }
 .best .reasons .reason4,
 .best .reasons .reason2 {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); */
   height: 200px;
   background: #a1a1a070;
 }
 .best .reasons .reason1,
 .best .reasons .reason3 {
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  /* clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); */
 
   height: 200px;
   background: #a1a1a070;
@@ -148,13 +159,13 @@ export default {};
 
 @media (max-width: 1200px) {
   .reason .v-icon {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 825px) {
   .reason span {
-font-size: 15px;
+    font-size: 15px;
   }
 }
 </style>

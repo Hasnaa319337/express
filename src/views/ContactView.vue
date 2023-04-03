@@ -7,22 +7,31 @@
         <P>{{ $t("misc.contactDaily") }}</P>
 
         <div class="contact_content">
-          <div class="info_content">
-            <v-row>
+          <div class="info_content" v-for="setting in settings" :key="setting">
+         
+            <v-row  v-if="setting.locale == this.$i18n.locale">
               <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
-                <v-icon icon="mdi-map-marker-outline" style="color:#13136b"/> <br />
-                <span>سلطنة عمان / مسقط</span>
-              </v-col>
-              <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
-                <v-icon icon="mdi-whatsapp" style="color:#08a508"/> <br />
-                <span>95564020</span>
-              </v-col>
-              <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
-                <v-icon icon="mdi-gmail" style="color:#cb0909"/>
+                <v-icon icon="mdi-map-marker-outline" style="color: #13136b" />
                 <br />
-                <span>Majanexpres@gmail.com</span>
+                <span >{{
+                  setting.address
+                }}</span>
+              </v-col>
+              <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
+                <v-icon icon="mdi-whatsapp" style="color: #08a508" /> <br />
+                <span >{{
+                  setting.phone
+                }}</span>
+              </v-col>
+              <v-col class="col_div" cols="12" lg="4" md="4" xs="12">
+                <v-icon icon="mdi-gmail" style="color: #cb0909" />
+                <br />
+                <span>{{
+                  setting.email
+                }}</span>
               </v-col>
             </v-row>
+    
           </div>
         </div>
       </v-container>
@@ -34,6 +43,29 @@
 import HeadCard from "../components/HeadCard.vue";
 export default {
   components: { HeadCard },
+  data() {
+    return {
+      settings: [],
+    };
+  },
+  methods: {
+    siteSettings() {
+      this.axios({
+        method: "GET",
+        url: "siteSetting",
+      })
+        .then((res) => {
+          this.settings = res.data.translations;
+          this.logo = res.data.logo;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  created() {
+    this.siteSettings();
+  },
 };
 </script>
 
@@ -59,10 +91,11 @@ export default {
     border-radius: 20px;
     padding: 20px;
     .info_content {
-      padding: 35px;
+      padding: 10px 45px;
+    padding-top: 0;
+    padding-bottom: 20px;
     }
 
- 
     h4 {
       text-align: center;
       margin-top: 0;
@@ -77,7 +110,7 @@ export default {
       text-align: center;
       .v-icon {
         font-size: 45px;
-       
+
         margin-bottom: 23px;
       }
       span {
@@ -98,16 +131,16 @@ export default {
 }
 @media (max-width: 500px) {
   .contact_content {
-  span{
-    font-size: 15px;
-  }
+    span {
+      font-size: 15px;
+    }
   }
 }
 @media (max-width: 450px) {
   .contact_content {
-  span{
-    font-size: 10px;
-  }
+    span {
+      font-size: 10px;
+    }
   }
 }
 </style>
